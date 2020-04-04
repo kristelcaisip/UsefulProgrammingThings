@@ -1,5 +1,8 @@
 # UsefulProgrammingThings
 
+## Software Design 
+* [The 12 Factor App](https://12factor.net/)
+
 ## Spring 
 * [Annotations CheatSheet](https://www.jrebel.com/blog/spring-annotations-cheat-sheet)
 
