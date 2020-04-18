@@ -12,4 +12,4 @@
 * [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables)
 
 ## Eclipse Plugins 
-![10 Eclipse Plugins You Shouldn't Code Without](img/eclipse_plugins.jpg)
+![10 Eclipse Plugins You Shouldn't Code Without](img/eclipse_plugins.png)
