@@ -12,8 +12,4 @@
 * [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables)
 
 ## Eclipse Plugins 
-|                   |                    |                           |
-|-------------------|--------------------|---------------------------|
-| SonarLint         | EGit               | Enhanced Class Decompiler |
-| Snyk Vuln Scanner | Spring Tools 4     | JSON Editor Plugin        |
-| Yaml Editor       | Asciidoctor Editor | DevStyle                  |
+![10 Eclipse Plugins You Shouldn't Code Without](img/eclipse_plugins.jpg)
