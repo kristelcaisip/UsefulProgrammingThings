@@ -3,6 +3,7 @@ This repo contains all the things that help me effectively do my programming stu
 
 ## Software Design 
 * [The 12 Factor App](https://12factor.net/)
+* [Big Ball of Mud (a.k.a. Spaghetti Code, Shanty Town)](http://www.laputan.org/mud/)
 
 ## Spring 
 * [Annotations CheatSheet](https://www.jrebel.com/blog/spring-annotations-cheat-sheet)
