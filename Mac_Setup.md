@@ -18,3 +18,31 @@
   # To test if this was set properly 
   echo $NAME_OF_VARIABLE
   ```
+
+## Install Maven 
+* Download Maven from the official website (https://maven.apache.org/download.cgi) use the `apache-maven-3.6.3-bin.tar.gz`
+* Extract the .tar.gz file and remove the .tar.gz file from your system 
+  ```bash
+  $ rm Downloads/apache-maven*bin.tar.gz
+  ```
+
+* Fix the permissions 
+  ```bash
+  $ chown -R root:wheel Downloads/apache-maven*
+  ```
+
+* Move the contents to the appropriate location and exit the session
+  ```
+  $ mv Downloads/apache-maven* /usr/local/opt/apache-maven
+  $ exit
+  ```
+
+* Open the bash_profile 
+  ```bash
+  $ vim ~/.bash_profile
+  ```
+
+* Add the Maven binaries to the path and append
+  ```bash
+  $ export PATH=$PATH:/opt/apache-maven/bin
+  ```
