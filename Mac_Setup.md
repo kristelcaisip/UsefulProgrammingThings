@@ -1,4 +1,4 @@
-# Useful Programming Things 
+# Useful Set-up Things - for Mac
 
 ## Set Up Env Variable Permanently
 * Add an `export` script in the appropriate file: 
@@ -46,3 +46,6 @@
   ```bash
   $ export PATH=$PATH:/opt/apache-maven/bin
   ```
+
+  ## Install multiple Java Versions
+  * https://medium.com/@brunofrascino/working-with-multiple-java-versions-in-macos-9a9c4f15615a
