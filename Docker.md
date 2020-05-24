@@ -15,7 +15,7 @@ $ docker rmi [IMAGE_NAME]
 
 # remove docker container 
 
-# access the mongodb 
+# access the mongodb shell
 $ docker exec -it [MONGO_CONTAINER_NAME] mongo
 
 ```
