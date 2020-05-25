@@ -100,6 +100,10 @@
   ```
   * Then you must check if the Automatic Software & Updates is enabled and change it from Show Applications > Software & Updates > Updates tab > Automatically check for updates: Never
 
+### Hotkeys
+* Logs 
+  * Shift+G - to go to the end of the interactive logs
+
 ---
 ## Useful Notes
 * Use the following website itsfoss.com/could-not-get-lock-error
