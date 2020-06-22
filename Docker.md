@@ -14,5 +14,9 @@ $ docker system prune
 $ docker rmi [IMAGE_NAME]
 
 # remove docker container 
+docker container rm [CONTAINER_NAME]
+
+# access the mongodb shell
+$ docker exec -it [MONGO_CONTAINER_NAME] mongo
 
 ```
