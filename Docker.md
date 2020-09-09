@@ -7,6 +7,13 @@ $ docker run -p 9411:9411 --name zipkin openzipkin/zipkin
 # run mongodb
 $ docker run -p 27017-27019:27017-27019 --name mongodb mongo
 
+# list all the existing containers
+$ docker ps -a
+
+# start and stop a container
+$ docker start [NAME]
+$ docker stop [NAME]
+
 # clean dangling images/containers
 $ docker system prune 
 
