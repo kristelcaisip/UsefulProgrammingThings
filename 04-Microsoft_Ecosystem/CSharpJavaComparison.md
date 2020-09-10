@@ -18,6 +18,7 @@
 | Dependency Injection | Spring | Unity DI (Windows), Autofac |
 | Object Mapping | Spring | Automapper |
 | Code Analysis | 3rd party (e.g. Sonarqube, Sonarlint) | stylecop.json, ca.ruleset <br/>as well as 3rd parties |
+| Unit Testing | JUnit | Microsoft Test Framework <br/> Moq C# |
 
 ## .NET
 
