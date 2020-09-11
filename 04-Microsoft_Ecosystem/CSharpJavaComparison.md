@@ -37,7 +37,11 @@
         * C# - runs on top of .NET
         * ASP.NET, MVC
 
-3. **ASP (Active Server Page)**
+3. **.NET Standard**
+    * Used for libraries (Library Projects)
+    * Host apps can be .NET Core or .NET Framework
+
+4. **ASP (Active Server Page)**
     * **ASP.NET** - supports various programming models
         * **ASP.NET Web Forms**
             * Modular pages out of components
