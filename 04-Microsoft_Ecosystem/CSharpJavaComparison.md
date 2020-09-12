@@ -1,14 +1,20 @@
-# C#/.Net and Java Comparison
+# Learning C# and .NET Core
 
-## Java VS .NET Terms
+## Java VS C#
+### Terms
 
 | Java | C# |
 |------|----|
 | Interface | Contract, Abstract |
 | Class | Concrete |
-| Package | Namespace | 
+| Package | Namespace |
+| .jar<br/>.war<br/>.ear | Assembly (DDL or EXE) |
+| .project | .sln |
+| POJO | POCO |
+| `final` | `readonly` |
+| All classes are `public` by default | All classes are `private` by default |
 
-## Java VS .NET Tools and Frameworks
+### Tools and Frameworks
 
 | Purpose | Java | C# |
 |---------|------|----|
@@ -18,7 +24,23 @@
 | Dependency Injection | Spring | Unity DI (Windows), Autofac |
 | Object Mapping | Spring | Automapper |
 | Code Analysis | 3rd party (e.g. Sonarqube, Sonarlint) | stylecop.json, ca.ruleset <br/>as well as 3rd parties |
-| Unit Testing | JUnit | Microsoft Test Framework <br/> Moq C# |
+| Unit Testing | JUnit | Microsoft Test Framework <br/> NUnit |
+| Mocking Framework | Mockito | Moq C# |
+| Runtime Environment | JVM | CLR (Common Language Runtime) |
+| Project | .project | .sln |
+| Remove Boilerplate | Lombok Framework <br/> `public String name;` | Built in <br/> `public string Name {get; set}`|
+| Application Server | Apache TomCat <br/> JBoss <br/> WebLogic Server (Oracle) | IIS (ASP.NET) |
+| | | |
+
+### Coding Conventions
+
+| Conventions | Java | C# |
+|-------------|------|----|
+| Methods | Camel Case <br/>`foo.barThis()` | Pascal Case <br/>`foo.BarThis()` |
+| Interfaces | None | Prefixed with "I"<br/>`IFooBar<T>`|
+| Brackets | None | New Line |
+| | | |
+
 
 ## .NET
 
@@ -30,6 +52,7 @@
     * Tightly bound IAS
 
 2. **.NET Core**
+    * Develop Cross Platform applications
     * Modular
     * Lightweight
     * Not tightly bound to IAS
@@ -37,11 +60,8 @@
         * C# - runs on top of .NET
         * ASP.NET, MVC
 
-3. **.NET Standard**
-    * Used for libraries (Library Projects)
-    * Host apps can be .NET Core or .NET Framework
-
-4. **ASP (Active Server Page)**
+### Build Web Apps with .NET
+* **ASP (Active Server Page)**
     * **ASP.NET** - supports various programming models
         * **ASP.NET Web Forms**
             * Modular pages out of components
