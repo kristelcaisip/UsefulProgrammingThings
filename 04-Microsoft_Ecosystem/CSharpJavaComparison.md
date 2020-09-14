@@ -1,7 +1,40 @@
-# Learning C# and .NET Core
+# C# Training (Code)
+
+*This repository contains my C# Training Material and Code. It has the following Projects:*
+* **Basics** - *Everything I have learned from the following sources:*
+    * [Microsoft's C# 101](https://bit.ly/2DVb5Az)
+        * This course pretty much goes through whatever is in this [C# Tutorials Material](https://docs.microsoft.com/en-gb/dotnet/csharp/tutorials/)
+            * kcaisip@gmail.com is used to track my training in [Microsoft Documentation](http://docs.microsoft.com/)
+    * [C# Yellow Book](http://www.csharpcourse.com/)
+    * [FreeCodeCamp Complete Beginners Tutorial](https://www.youtube.com/watch?v=GhQdlIFylQ8)
+        * TBA
+* **Advanced** - *More Advanced Topics that includes integration with other things and covers the following topics --TBA*
+    * OAuth 2.0
+    * TDD Approach and Unit Testing
+    * Error Handling
+    * Microservices
+    * Web Applications
+    * Messaging and Queueing Services
+        * Using [Redis](https://www.youtube.com/watch?v=Hbt56gFj998)
+    * Design Patterns
+    * Parallel Programming
+    * Custom Library Project
+    * Templates
+* **Notes.md** - *My Notebook that contains all the useful notes I have taken along the way.*
+
+*These are the Versions that I am using:*
+* [.NET Core 3.1](https://docs.microsoft.com/en-us/dotnet/?view=netcore-3.1)
+* [Visual Studio 2019]()
+
+---
+
+# Cheatsheet
+
+*To quickly learn C#, I've created this list that other people coming from a Java background and have not touched any Microsoft Products (except for your PC, MS Office, and Visual Basic).*
 
 ## Java VS C#
-### Terms
+
+### 1. Terms
 
 | Java | C# |
 |------|----|
@@ -12,9 +45,10 @@
 | .project | .sln |
 | POJO | POCO |
 | `final` | `readonly` |
+|  `import` | `using` |
 | All classes are `public` by default | All classes are `private` by default |
 
-### Tools and Frameworks
+### 2. Tools and Frameworks
 
 | Purpose | Java | C# |
 |---------|------|----|
@@ -32,7 +66,7 @@
 | Application Server | Apache TomCat <br/> JBoss <br/> WebLogic Server (Oracle) | IIS (ASP.NET) |
 | | | |
 
-### Coding Conventions
+### 3. Coding Conventions
 
 | Conventions | Java | C# |
 |-------------|------|----|
@@ -42,9 +76,17 @@
 | | | |
 
 
-## .NET
+## C# VS .NET
 
-<p> Has 2 "flavours": <p>
+*The names and terms have slight nuances and can get very confusing.*
+
+| C#                                             | .NET                                           |
+|------------------------------------------------|------------------------------------------------|
+| Programming Language                           | Framework for building applications on Windows |
+|                                                | Not limited to just C# (e.g. F# and VB.NET)    |
+|                                                | Made of 2 Components:<br/> CLR (Common Language Runtime<br/> Class Library) |
+
+### .NET Has 2 "flavours":
 
 1. **.NET Framework**
     * Only for Window OS
@@ -75,3 +117,30 @@
         * **Single Page Web App**
             * Dynamically rewrites current web page
             * Goal: LAF of native app
+
+---
+
+# Visual Studio 2019
+
+## HotKeys
+
+| HotKeys | What it Does |
+|---------|--------------|
+| **F5** | Run the application (Debug Mode) |
+| **Ctrl+F5** | Run the application |
+| **Ctrl+Shift+B** | Compile the application |
+| **cw + Tab** | `Console.WriteLine();` |
+| **Ctrl+Click or Cmd+Click** | Opens the Object Browser |
+| **F11** | At Debug, Step Into Code |
+| **F10**  | At Debug, Step Over Code |
+| **Ctrl+G**  | Jumps a line number |
+| **[]**  | [] |
+
+--- 
+# Useful Links
+
+* [C# Official Documentation](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [Test Driven Development](https://www.freecodecamp.org/news/tdd-explanation-hands-on-practice-with-c-a0124338be44/)
+* [CLR vs JVM](https://blog.overops.com/clr-vs-jvm-how-the-battle-between-net-and-java-extends-to-the-vm-level/#:~:text=Top%20differences%20between%20the%20CLR,JIT%20compiler%20called%20Java%20HotSpot)
+* [C# vs Java](https://blog.overops.com/c-vs-java-5-irreplaceable-c-features-wed-kill-to-have-in-java/)
+* [Comparisons](https://bit.ly/2FhTjZ0)
