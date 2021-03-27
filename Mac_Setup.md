@@ -49,3 +49,13 @@
 
   ## Install multiple Java Versions
   * https://medium.com/@brunofrascino/working-with-multiple-java-versions-in-macos-9a9c4f15615a
+
+  ## Troubleshoot
+
+  * *Port [PORT_NUMBER] already in use*
+
+    ```
+    $ lsof -i tcp:[PORT_NUMBER]
+    $ kill [PID] PID
+    ```
+  
