@@ -1,19 +1,37 @@
 # React.JS
 
+* Javascript library for building user interfaces
+   * Uses a declarative approach 
+      * Makes it easy to create interactive UIs with simple views for each state within your application
+   * Automatically renders any changes to their specific components
+   * Component based approach
+      * Encapsulate behaviours into small units
+   * Technology Stack Agnostic
+      * Only the UI side of this - it does not care about the back-end server
+* History
+   * FB Newsfeed in 2011 by Jordan Walke
+   * Designed for speed, simplicity, and scalability
+* React Vocabulary
+   * One-way data flow - Flux architecture
+   * JSX - 
+   * Components - 
+   * State - 
+   * Props - way of passing data between different components
+   * Virtual DOM - 
+   * Element - smallest unit of a React Application
+   * Flux/Redux - 
+   * Testing - 
+
 ## Cheatsheet - Useful CLI Commands
 
-* To use React, you would need `node` and `npm` installed
+* To use React, you would need `node` and `yarn` installed (https://yarnpkg.com/)
+   * You can use `npm` but `yarn` is better from experience
 
 ```
-$ npm install [DEPENDENCY]          // install a dependency
-$ npx create-react-app [APP_NAME]   // create a new React project with npx
-$ npm init react-app [APP_NAME]     // create a new React project with npm
-$ npm start                         // launch the application in http://localhost:3000
-$ npm run build                     // for PROD
-$ npm test                          // run unit tests
-$ npm run eject                     // remove dependencies
-$ npm run install                   // runs the package.json and scripts.install
-cd
+$ npm install -g create-react-app         // it will install create-react-app globally (you might need sudo)
+$ create-react-app [APP_NAME]             // cd into the directory you want to create the app and create one
+$ cd [APP_NAME]                           // navigate into the project dir
+$ yarn start                              // run the application and it should open it in localhost:3000
 ```
 
 * `npm` vs `npx`
@@ -84,7 +102,21 @@ cd
       * Described in `[COMPONENT_NAME].css`
          * One .css file can be created for each component or it can be all added in the `index.css` component
    * **State:**
-      * 
+      * Can be to do with the initial and final state of a component
+         * Intial State is typically defined in a constructor
+            ```
+            // adding this inside of a class
+            // Initial State
+            constructor() {
+               super();
+               this.state = {
+                     counter: 0
+               }
+
+               //bind the function
+               this.increment = this.increment.bind(this);
+            }
+            ```
    * **Props:**
       * 
 * Tips for writing any custom React Component:
@@ -105,7 +137,7 @@ cd
          ```
          //App.js
          import React, { Component } from 'react';
-         import FirstComponent, {SecondComponent, ThirdComponent} from './components/learning-examples/Component';
+         import FirstComponent, {SecondComponent, ThirdComponent} from './components/MyComponents';
          import logo from './logo.svg';
          import './App.css';
          
@@ -123,7 +155,7 @@ cd
          }
          export default App;
 
-         //Components.jsx (with three components: FirstComponent, SecondComponent, and ThirdComponent)
+         //MyComponents.jsx (with three components: FirstComponent, SecondComponent, and ThirdComponent)
          import React, {Component} from 'react';
 
          export default class FirstComponent extends Component {
@@ -179,6 +211,8 @@ cd
 
 ### Class Component
 
+* A component encapsulated in a class (i.e. Object Oriented)
+* A Class component can have multiple functions
 * Class Component must: 
    * Import the React component
    * Extend the class `Component` (found in the core `react`) framework
@@ -219,6 +253,9 @@ cd
 
 ### Functional Component
 
+* Function can be in a class as a local function or it can just be a standalone component
+   * It does not need the `function` keyword in before the function name
+   * It should have `this.[FUNCTION_NAME]` notation since it is a local function
 * Function Component must: 
    * Have a Function declaration
    * Return the JSX
@@ -239,3 +276,20 @@ cd
    * Almost like a template language (i.e. HTML within JavaScript)
 * [Babel.js](https://babeljs.io) is the one that converts JSX into JavaScript
 * Recommended to use in React to describe the View/UI should look like
+* You cannot use caps in JSX --it will not compile!!
+* It makes use of a `className` instead of `class`
+   ```
+   <span className="MyClass></span>
+   ```
+* All the attributes uses camelCase
+
+### Using Methods in JSX
+
+* When adding Javascript into JSX, it must be enclosed in `{}`
+* Functions can be invoked or add a reference to it
+   * Invoked - function is called automatically
+   * Reference - function is called when an event occurs
+   ```
+   <button onClick={increment()}/>      //invoked; called when the page is loaded
+   <button onClick={increment}>         //referenced; called whenever the button is clicked
+   ```
