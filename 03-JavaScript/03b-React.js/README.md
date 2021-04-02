@@ -22,10 +22,13 @@
    * Flux/Redux - 
    * Testing - 
 
-## Cheatsheet - Useful CLI Commands
+## Set-up
 
 * To use React, you would need `node` and `yarn` installed (https://yarnpkg.com/)
-   * You can use `npm` but `yarn` is better from experience
+   * You can use `npm` or `npx` but `yarn` is better and more stable (from experience)
+      * `npm` vs `npx`
+         * `npm` - Manager
+         * `npx` - Execute; a small utility that’s smart enough to run the right application when it’s called from within a project
 
 ```
 $ npm install -g create-react-app         // it will install create-react-app globally (you might need sudo)
@@ -34,9 +37,10 @@ $ cd [APP_NAME]                           // navigate into the project dir
 $ yarn start                              // run the application and it should open it in localhost:3000
 ```
 
-* `npm` vs `npx`
-   * `npm` - Manager
-   * `npx` - Execute; a small utility that’s smart enough to run the right application when it’s called from within a project
+* Developer Tools
+   * **react-devtools** (https://github.com/facebook/react-devtools)
+      * Extension as add-on to browser or a standalone app
+      * You can see various aspects of the application including the DOM hierarchy
 
 ## Overview
 
@@ -97,13 +101,25 @@ $ yarn start                              // run the application and it should o
    * **Logic:**
       * How a component should behave (i.e. form elements)
       * Written JavaScript
+      * Event Handling
+         * Similar to handling DOM elements events
+            * Use camelCase to specify events
+            * Pass function as the event handler
+            * Example:
+               ```
+               <Card onClick={() => this.onDishSelect(dish)}>
+               ```
    * **Styling:** 
       * How a component should look like
       * Described in `[COMPONENT_NAME].css`
          * One .css file can be created for each component or it can be all added in the `index.css` component
    * **State:**
+      * Each component can store its own local information in its "state"
+         * Private and fully controlled by the component
+         * Can be passed as `props` to children
+      * Only Class Components can have local state
       * Can be to do with the initial and final state of a component
-         * Intial State is typically defined in a constructor
+         * Intial State is typically defined in a constructor (`this.state`)
             ```
             // adding this inside of a class
             // Initial State
@@ -117,13 +133,35 @@ $ yarn start                              // run the application and it should o
                this.increment = this.increment.bind(this);
             }
             ```
+      * State should only be modified using `setState()` and supply the property that will be modified
+         ```
+         onDishSelect(dish){
+            this.setState({
+               selectedDish: dish
+            });
+         }
+         ```
+         * *Note: Never directly manipulate the state `this.state.selectedDish=dish;`*
+      * **Lifting State Up**
+         * Sometimes components may share the same data and changes to the data in one component must be reflected in another component
+         * Best Approach: move the shared state to a common ancestor component
    * **Props:**
-      * 
-* Tips for writing any custom React Component:
+      * A way to pass JSX attributes into a component as a single object
+      * You can pass multiple attributes
+      * Props cannot be modified within the component
+      * Examples:
+         * Dishes are available as **props** within the Menu Component and can be accessed as `this.props.dishes`
+            ```
+            <Menu dishes={this.state.dishes} />
+            ```
+         * Dish is available as **props** within the Dishdetail Component and can be accessed as `this.props.dish` and comments as `this.props.comments`
+* Tips for writing any **custom React Component**:
    * You must always import `React` component in your class      
    * Name must be in PascalCase
       * Or at least begin with a capital letter
       * Especially when using as part of JSX. This will not compile otherwise
+         * Camel case or lower case letters are treated as DOM tags
+      * The components compile to `React.createElement(...)`
    * Each Component must be in its own **class file** and added in the `src/components` directory of your project
       * Each file must be have a `.jsx` extension
    * Export it to make it useable to other modules
@@ -188,7 +226,18 @@ $ yarn start                              // run the application and it should o
             }
          }
          ```
-      
+* **React Component Lifecycle**
+   * **Mounting**
+      * These are called when an instance of a component is created and inserted into the DOM
+         * `constructor()`
+         * `getDerivedStateFromProps()`
+         * `render()`
+         * `componentDidMount()`
+      * Deprecated Methods (NOTE: DO NOT USE!!):
+         * `componentWillMount()`
+   * **Updating**
+      * 
+   * **Un-Mounting**
 
 ### Root Component
 
