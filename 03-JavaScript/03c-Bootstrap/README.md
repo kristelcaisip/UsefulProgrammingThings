@@ -26,7 +26,7 @@
 
 ### Foundations for Responsive Design
 
-* **Grid System**
+#### **Grid System**
   * This system can be applied using the **viewport** meta tag
     * Ensures the screen width is set to the device width and content is rendered appropriately
   * **Bootstrap Grid System**
@@ -91,3 +91,58 @@
       }
       ```
   * Bootstrap does this...
+
+#### Nav Bar and Breadcrumbs
+
+* NavBar can be added as: 
+  ```
+  <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+       <div class="container">
+           <!-- For mobile devices, add a Toggle button to show and hide the links of the navbar for small screens -->
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <a class="navbar-brand" href="./index.html">Ristorante con Fusion</a>
+           <!-- Show or hide this Navigation list depending on the device; show this for larger screens-->
+           <div class="collapse navbar-collapse" id="Navbar">
+               <ul class="navbar-nav mr-auto">
+                   <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                   <li class="nav-item active"><a href="#" class="nav-link">About</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+  ```
+* Breadcrumbs can be added as: 
+  ```
+  <!-- Adding the Breadcrumb -->
+  <ol class="col-12 breadcrumb">
+      <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+      <li class="breadcrumb-item active">About Us</li>
+  </ol>
+  ```
+
+#### Icon Fonts
+
+* Sets of symbols and glyphs used as regular fonts
+* There are many icon font packs available:
+  * Font Awesome (most popular!!)
+    * Usage:
+      * Include the CSS files and font files into your project
+      * You can then start adding:
+        ```
+        <i class="fa fa-phone"></i>
+        ```
+  * Bootstrap-social
+    * Uses Bootstrap and Font Awesome icons to create buttons for social media sites
+    * Usage:
+      * Include the `bootstrap-social.class` into your project
+      * You can then start using it
+        ```
+        <a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=">
+           <i class="fa fa-facebook"></i>
+        </a
+        ```
+  * 
