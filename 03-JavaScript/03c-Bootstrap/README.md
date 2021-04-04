@@ -51,6 +51,7 @@
       | Gutter Width        | 30px (15px on each  side of the column) | 30px (15px on each  side of the column)           | 30px (15px on each  side of the column)           | 30px (15px on each  side of the column)           | 30px (15px on each  side of the column)           |
       | Nestable            | Yes                                     | Yes                                               | Yes                                               | Yes                                               | Yes                                               |
       | Offsets             | Yes                                     | Yes                                               | Yes                                               | Yes                                               | Yes                                               |
+      * The table above shows the default values of Bootstrap Grid division
       * Bootstrap divides the entire screen width range into 5 classes:
         1) `default` targets all screen sizes (i.e. extra small to extra large)
         2) `sm` for small
