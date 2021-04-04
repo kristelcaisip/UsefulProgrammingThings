@@ -17,3 +17,76 @@
   // run the application (you can use npm start but I prefer using yarn)
   $ yarn start
   ```
+
+## Responsive Design
+
+* Adapting to the user's **viewport** so you can view the same website in different screen sizes and layout
+* Mobile First Design
+  * Looks at designing a website for a mobile device first and then increasing the content/details as the size of the sceen increases as well
+
+### Foundations for Responsive Design
+
+* **Grid System**
+  * This system can be applied using the **viewport** meta tag
+    * Ensures the screen width is set to the device width and content is rendered appropriately
+  * **Bootstrap Grid System**
+    * https://getbootstrap.com/docs/4.6/layout/grid/
+      ```
+      <html>
+      <head>
+      ...
+      <meta name="viewport" content="width=device=width,initial-scale=1, shrink-to-fit=no">
+      </head>
+      ...
+      </html
+      ```
+    * Makes use of the **CSS Flexbox Layout** (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    * Bootstrap Grid Classes:
+      |                     | Extra Small <576px                      | Small ≥576px                                      | Medium ≥768px                                     | Large ≥992px                                      | Extra Large ≥1200px                               |
+      |---------------------|-----------------------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|---------------------------------------------------|
+      | Grid Behaviour      | Horizontal at all times                 | Collapsed to start,  horizontal above breakpoints | Collapsed to start,  horizontal above breakpoints | Collapsed to start,  horizontal above breakpoints | Collapsed to start,  horizontal above breakpoints |
+      | Max container width | None (auto)                             | 540px                                             | 720px                                             | 960px                                             | 1140px                                            |
+      | Class Prefix        | .col-                                   | .col-sm-                                          | .col-md-                                          | .col-lg-                                          | .col-xl-                                          |
+      | No. of Columns      | 12                                      | 12                                                | 12                                                | 12                                                | 12                                                |
+      | Gutter Width        | 30px (15px on each  side of the column) | 30px (15px on each  side of the column)           | 30px (15px on each  side of the column)           | 30px (15px on each  side of the column)           | 30px (15px on each  side of the column)           |
+      | Nestable            | Yes                                     | Yes                                               | Yes                                               | Yes                                               | Yes                                               |
+      | Offsets             | Yes                                     | Yes                                               | Yes                                               | Yes                                               | Yes                                               |
+      * Bootstrap divides the entire screen width range into 5 classes:
+        1) `default` targets all screen sizes (i.e. extra small to extra large)
+        2) `sm` for small
+        3) `md` for medium
+        4) `lg` for large
+        5) `xl` for exta large screen sizes
+    * Usage: `.col-*, .col-sm-*, .col-md-*, .col-lg-*`
+      * the `*` can be replaced with 
+        * a number to specify how much column size it will occupy; must total to 12
+          * e.g. `<div class="col-sm-5></div><div class="col-sm-7"></div>` 
+        * with nothing to divide the 12 columns into how many equal parts
+          * e.g. `<div class="col-sm"></div><div class="col-sm"></div><div class="col-sm"></div>`
+          * e.g. `<div class="col=sm"></div><div class="col-sm-6></div><div class="col-sm"></div>`
+    * How it works: 
+      * Apply a `container` class to the **outermost layer**
+      * Inside this, the **content** is laid out in the form of `rows`
+      * And each row can be subdivided into multiple **12 equal sized** `columns`
+        ```
+        <div class="container">
+          <div class="row">
+            < div class="column"></div>
+          </div>
+        </div>
+        ```
+* **Fluid Images**
+  * Images in your website will automatically adapt to screen size
+* **Media Queries**
+  * CSS Technology to apply styles based on the size of the viewport
+    * From CSS code, you can query the size of the media and adjust the CSS classes to fit the size of the screen
+      ```
+      // You can create one media query per width to support different viewports
+      @media (min-width: 992px){
+        .container {
+          width: 960x;
+          max-width: 100%;
+        }
+      }
+      ```
+  * Bootstrap does this...
