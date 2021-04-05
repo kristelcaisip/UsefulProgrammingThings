@@ -341,3 +341,47 @@
       </div>
   </div>
   ```
+
+#### Images and Media
+
+* Can use the standard markup for HTML Images and you can style it with bootstrap
+  ```
+  <img src="..." class="..." />
+  ```
+* You can include an image or media in: 
+  * Card Class
+    ```
+    <div class="card">
+      <img class="card-img-top img-fluid src="img/alberto-large.png" alt="Alberto Somayya">
+    </div>
+    ```
+  * Media Object
+    ```
+    <!-- Adding Media within a thumbnail -->
+    <div class="media">
+        <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="alberto">
+        <div class="media-body">
+            <h2 class="mt-0">Alberto Somayya</h2>
+            <h4>Executive Chef</h4>
+            <p>
+              Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, 
+              he specializesin creating mouthwatering Indo-Italian fusion experiences.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Adding a Logo in the Navigation Bar -->
+    <a class="navbar-brand" href="./index.html"><img src="img/logo.png" height="30" width="41"></a>
+    ```
+  * Responsive Embed
+    * Embedding media content (e.g. video, and making it responsive)
+    * You can apply `embed-responsive-item` to `<embed>`, `<iframe>`, `<video>`, `<object>` 
+    * Enclose in `<div>` and apply `embed-responseive` and `embed-response-4by3` or `embed-responseive-16by9`
+    * Allows you to specify an image or media and position to the left or right of the description
+    * Also a `media-body` to define the actual content   
+* Some examples
+  * `img-fluid` - for responsive images; scales nicely with the parent element
+  * `img-thumbnail` - thumbnail image
+  * Shaping the elements:
+    * `rounded-[top | bottom | right | left]` - for rounded corners
+    * `rounded-circle` - circular image
