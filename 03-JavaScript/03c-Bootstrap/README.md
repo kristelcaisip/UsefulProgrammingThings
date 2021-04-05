@@ -126,7 +126,7 @@
 
 #### Icon Fonts
 
-* Sets of symbols and glyphs used as regular fonts
+* Sets of symbols and glyphs used as regular fonts; more information (https://fontawesome.com/)
 * There are many icon font packs available:
   * Font Awesome (most popular!!)
     * Usage:
@@ -145,4 +145,24 @@
            <i class="fa fa-facebook"></i>
         </a
         ```
-  * 
+* Set-up:
+  ```
+  // fetch font-awesome classes
+  $ npm install font-awesome@latest --save
+  // install it into your project
+  $ npm install bootstrap-social@latest --save
+  ```
+* Usage
+  * You can either use `<span>` or `<i>` for this and mix the `bootstrap-social` with `font-awesome` classes
+    ```
+    <div class="col-12 col-sm-4 align-self-center">
+        <div>
+            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i> Google+</a>
+            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i> Facebook</a>
+            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i> LinkedIn</a>
+            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i> Twitter</a>
+            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i> YouTube</a>
+            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i>Mail</a>
+        </div>
+    </div>
+    ```
