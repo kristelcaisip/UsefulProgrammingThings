@@ -24,7 +24,7 @@
 * Mobile First Design
   * Looks at designing a website for a mobile device first and then increasing the content/details as the size of the sceen increases as well
 
-### Foundations for Responsive Design
+### Foundations for Responsive Design in Bootstrap
 
 #### **Grid System**
   * This system can be applied using the **viewport** meta tag
@@ -258,4 +258,86 @@
           </div>
       </div>
   </form>
+  ```
+
+#### Tables
+
+* Can use the standard markup for HTML tables and you can style it with bootstrap
+* Usage:
+  ```
+  <table class="table table-striped">
+     <thead class="thead-dark">
+         <tr>
+             <th>&nbsp;</th>
+             <th>2013</th>
+             <th>2014</th>
+             <th>2015</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <th>Employees</th>
+             <th>13</th>
+             <th>30</th>
+             <th>40</th>
+         </tr>
+         <tr>
+             <th>Guests Served</th>
+             <th>15,000</th>
+             <th>45,000</th>
+             <th>100,000</th>
+         </tr>
+         <tr>
+             <th>Special Events</th>
+             <th>3</th>
+             <th>20</th>
+             <th>45</th>
+         </tr>
+         <tr>
+             <th>Annual Turnover</th>
+             <th>£251,325</th>
+             <th>£1,250,375</th>
+             <th>~£3,000,000</th>
+         </tr>
+     </tbody>
+  </table>
+  ```
+
+#### Cards
+
+* Alternative to Tables, Bootstrap provides a flexible and extensible content container with multiple variants and options
+  * You can display contents in millions of ways
+* Usage
+  ```
+  <!-- Adding a Card Component -->
+  <div class="col-sm">
+      <div class="card">
+          <h3 class="card-header bg-primary text-white">Facts at a Glance</h3>
+          <div class="card-body">
+              <dl class="row">
+                  <dt class="col-6">Started</dt><dd class="col-6">3 Feb 2013</dd>
+                  <dt class="col-6">Major Stake Holder</dt><dd class="col-6">HK Fine Foods Inc.</dd>
+                  <dt class="col-6">Last Year's Turnover</dt><dd class="col-6">£1,250,375</dd>
+                  <dt class="col-6">Employees</dt><dd class="col-6">40</dd>
+              </dl>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Adding a Card Component with blockquote -->
+  <div class="col-12">
+      <div class="card card-body bg-light">
+          <blockquote class="blockquote">
+              <p class="mb-0">
+                  You better cut the pizza in four pieces because I'm not hungry enough to eat six.
+              </p>
+              <footer class="blockquote-footer">
+                  Yogi Berra,
+                  <cite title="Source Title">
+                      The wit and wisdom of Yogi Berra, P. Pepe, Diversion Books, 2014
+                  </cite>
+              </footer>
+          </blockquote>
+      </div>
+  </div>
   ```
