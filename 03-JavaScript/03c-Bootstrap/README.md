@@ -166,3 +166,18 @@
         </div>
     </div>
     ```
+
+#### Button Groups
+
+* Usage
+  ```
+  <!-- Creating a button group and buttons -->
+  <div class="btn-group" role="group">
+      <!-- Create a call button to allow users to make a phone call -->
+      <a role="button" class="btn btn-primary" href="tel:+12345678"><i class="fa fa-phone"></i> Call</a>
+      <!-- This does not do much -->
+      <a role="button" class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
+      <!-- Create a call button to allow users to send and email -->
+      <a role="button" class="btn btn-success" href="mailto:confusion@food.com"><i class="fa fa-envelope-o"></i> Email</a>
+  </div>
+  ```
