@@ -92,8 +92,15 @@
       ```
   * Bootstrap does this...
 
-#### Nav Bar and Breadcrumbs
+#### Nav Bar
 
+* Navigation Bar Design
+  * [Designing a Winning Navigation Menu: Ideas and Inspirations](https://bit.ly/2OnrgMf)
+    * Good suggestion on how to design navigation for a website
+  * [Are you Making These Common Website Navigation Mistakes?](https://bit.ly/2Pu1NBo)
+    * Worth reading about what NOT to do
+  * [3 Reasons we should Stop Using Navigation Bars](https://bit.ly/39HANFp)
+    * A provocative view on navigation bars
 * NavBar can be added as: 
   ```
   <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
@@ -115,6 +122,12 @@
        </div>
    </nav>
   ```
+
+#### Breadcrumbs
+
+* Breadcrum Design
+  * [Breadcrumb Navigation Examined: Best Practises and Examples](https://bit.ly/31KgIK4)
+  * [Breadcrumb Navigation: A Guide on Types, Benefits and Best Practises](https://bit.ly/3fIOmbu)
 * Breadcrumbs can be added as: 
   ```
   <!-- Adding the Breadcrumb -->
@@ -126,9 +139,9 @@
 
 #### Icon Fonts
 
-* Sets of symbols and glyphs used as regular fonts; more information (https://fontawesome.com/)
+* Sets of symbols and glyphs used as regular fonts
 * There are many icon font packs available:
-  * Font Awesome (most popular!!)
+  * Font Awesome (most popular!!); more information (https://fontawesome.com/)
     * Usage:
       * Include the CSS files and font files into your project
       * You can then start adding:
@@ -136,7 +149,7 @@
         <i class="fa fa-phone"></i>
         ```
   * Bootstrap-social
-    * Uses Bootstrap and Font Awesome icons to create buttons for social media sites
+    * Uses Bootstrap and Font Awesome icons to create buttons for social media sites (https://lipis.github.io/bootstrap
     * Usage:
       * Include the `bootstrap-social.class` into your project
       * You can then start using it
