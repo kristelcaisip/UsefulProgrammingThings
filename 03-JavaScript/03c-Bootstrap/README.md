@@ -385,3 +385,21 @@
   * Shaping the elements:
     * `rounded-[top | bottom | right | left]` - for rounded corners
     * `rounded-circle` - circular image
+
+### Alerting Users
+
+* Bootstrap has different components that enables us to keep users informed:
+  * Badges (https://getbootstrap.com/docs/4.6/components/badge/)
+    * For simple updates
+    * Allow us to draw attention of users to recent updates to our web page
+    * Easy way to adding small amount of information to your website to attract the attention of the visitors
+      ```
+      <h2 class="media-heading">
+        Uthappizza
+        <span class="badge badge-danger">HOT</span>
+        <span class="badge badge-pill badge-secondary">£4.99</span>
+      </h2>
+      ```
+  * Alert / Error / Warning Messages
+    * Should the users perform operations that are invalid or not allowed
+  * Progress Bars - Keep users informed about the progress of whatever operations that they initiate on the website
