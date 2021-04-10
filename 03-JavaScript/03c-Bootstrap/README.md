@@ -386,3 +386,54 @@
     * `rounded-[top | bottom | right | left]` - for rounded corners
     * `rounded-circle` - circular image
 
+### Alerting Users
+
+* Bootstrap has different components that enables us to keep users informed:
+  * Badges (https://getbootstrap.com/docs/4.6/components/badge/)
+    * For simple updates
+    * Allow us to draw attention of users to recent updates to our web page
+    * Easy way to adding small amount of information to your website to attract the attention of the visitors
+      ```
+      <h2 class="media-heading">
+        Uthappizza
+        <span class="badge badge-danger">HOT</span>
+        <span class="badge badge-pill badge-secondary">£4.99</span>
+      </h2>
+      ```
+  * Alert / Error / Warning Messages
+    * Should the users perform operations that are invalid or not allowed
+    * This is mainly using `<div class="alert alert-*"></div>`
+      * Alerts can be in different colors
+      * Can include links in alert
+      * Use `alert-dismissible` and X button to dismiss alert
+        * Needs Javascript plugin
+      * Example below shows a yellow alert (warning) that is dismissable
+        ```
+        <div class="aler alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          <strong>Warning:</strong>: Please
+          <a href="tel:+44123456789" class="aler-link">
+            call
+          </a> us to reserve for more than six guests
+        </div>
+        ```
+  * Progress Bars - Keep users informed about the progress of whatever operations that they initiate on the website
+    * This can be applied on activities such as uploading a file (to see how much time left)
+    * This can be created by applying a progress class to the div and inside, there an inner div to which you apply the progress bar class
+    * It can be stacked together to create a stacked progress bar with different colors and add animation
+    * Usage:
+      * `div` with progress class
+         * `inner <div>` with `progress-bar` class
+         * `style="width:xx %"` controls the size
+         * `progress-bar-*`
+            * colors: primary, danger, ...
+            * striped: striped appearance, also use `animated` for animation
+      ```
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped-bg-danger" role="progressbar" style="width:80%">
+          80%
+        </div>
+      </div>
+      ```
