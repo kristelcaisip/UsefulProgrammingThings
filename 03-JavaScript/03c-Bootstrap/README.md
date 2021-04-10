@@ -385,3 +385,4 @@
   * Shaping the elements:
     * `rounded-[top | bottom | right | left]` - for rounded corners
     * `rounded-circle` - circular image
+
