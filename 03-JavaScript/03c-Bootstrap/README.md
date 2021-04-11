@@ -437,3 +437,17 @@
         </div>
       </div>
       ```
+## Bootstrap and JavaScript Components Overview
+
+![image](img/Bootstrap_and_Javascript.png)
+
+* Bootstrap's approach to using JavaScript (diagram)
+  * JavaScript on its own, provides a lot of flexibility but "untamed"
+  * JQuery as a library, built on top of JavaScript, packages JavaScript in a more manageable and easire to use in website designs
+  * Bootstrap packaging JavaScript plugins intoa component that can be easily used in web pages
+    * Bootstrap JavaScript-based components takes the JQuery-based support then packages them so that it can be used without writing a single JavaScript code
+      * `data-*` attributes (e.g. `data-toggle`, `data-spy`)
+      * Straighforward approach to use plugins
+* Bootstrap's JavaScript support is through **JS Plugins**
+  * Plugins written based on JQuery
+  * Plugins can be individually included
