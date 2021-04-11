@@ -439,7 +439,7 @@
       ```
 ## Bootstrap and JavaScript Components Overview
 
-![image](img/Bootstrap_and_Javascript.png)
+![image](../img/Bootstrap_and_Javascript.png)
 
 * Bootstrap's approach to using JavaScript (diagram)
   * JavaScript on its own, provides a lot of flexibility but "untamed"
