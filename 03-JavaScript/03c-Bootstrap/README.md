@@ -123,6 +123,10 @@
    </nav>
   ```
 
+##### Tabs and Pills
+* Navigation elements for navigating content within a page that is organised into multiple panes (without reloading the whole page
+  * You're not navigating to a new page, but it displays only the data that corresponds to the tab or pill
+
 #### Breadcrumbs
 
 * Breadcrum Design
@@ -451,3 +455,35 @@
 * Bootstrap's JavaScript support is through **JS Plugins**
   * Plugins written based on JQuery
   * Plugins can be individually included
+* Usage
+  ```
+  <!-- Using Tabs, Pills and Tabbed Navigation -->
+  <ul class="nav nav-tabs">
+      <li class="nav-item">
+          <a class="nav-link active" href="#peter" role="tab" data-toggle="tab">Peter Pan, CEO</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#wendy" role="tab" data-toggle="tab">Wendy Darling, CFO</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#alberto" role="tab" data-toggle="tab">Alberto Sommayya, Executive Chef</a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade show active" id="peter">
+          <h3>Pete Pan <small>Chief Epicurious Officer</small></h3>
+          <p class="d-none d-sm-block">Our CEO, Peter,</p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="wendy">
+          <h3>Wendy Darling <small>Chief Food Officer</small></h3>
+          <p class="d-none d-sm-block">Our CRO, Wendy,</p>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="alberto">
+          <div class="col col-sm order-sm-first col-md">
+              <h3>Alberto Somayya</h3><small>Executive Chef</small
+              <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+          </div>
+      </div>
+  </div>
+  <!-- end of Using Tabs, Pills and Tabbed Navigation -->
+  ```
