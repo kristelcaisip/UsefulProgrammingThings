@@ -630,8 +630,10 @@
 </div>
 <!-- end of Adding a Carousel -->
 ```
-      
-## Bootstrap and JavaScript Components Overview
+
+## Bootstrap and JQuery
+
+### Bootstrap and JavaScript Components Overview
 
 ![image](../img/Bootstrap_and_Javascript.png)
 
@@ -642,6 +644,88 @@
     * Bootstrap JavaScript-based components takes the JQuery-based support then packages them so that it can be used without writing a single JavaScript code
       * `data-*` attributes (e.g. `data-toggle`, `data-spy`)
       * Straighforward approach to use plugins
+  * Full JS API Available if needed (requires JQuery syntax and Javascript
 * Bootstrap's JavaScript support is through **JS Plugins**
   * Plugins written based on JQuery
   * Plugins can be individually included
+
+### JQuery
+
+* Lightweight JS library for the follwoing features:
+  * HTML/DOM manipulation
+  * CSS manipulation
+  * HTML Event methods
+  * Effects and Animations
+  * AJAX
+* Bootstrap JS Components build upon JQuery
+* Usage:
+  ```
+  <!-- Adding Carousel Indicators -->
+  <ol class="carousel-indicators">
+      <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#mycarousel" data-slide-to="1"></li>
+      <li data-target="#mycarousel" data-slide-to="2"></li>
+  </ol>
+  <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+  </a>
+
+  <!-- Adding JavaScript based controls using JQuery -->
+  <!-- This is related to "JS Controls Using JQuery"-->
+  <div class="btn-group" id="carouselButton">
+      <button class="btn btn-danger btn-sm" id="carousel-pause">
+          <span class="fa fa-pause"></span>
+      </button>
+      <button class="btn btn-danger btn-sm" id="carousel-play">
+          <span class="fa fa-play"></span>
+      </button>
+  </div>
+  <!-- end of Adding JavaScript based controls using JQuery -->
+  
+  ...
+  
+  <!-- Using a bit of JQuery-->
+  <script>
+      $(document).ready(function(){
+          
+          //For the JS Controls Using JQuery
+          $("#mycarousel").carousel({ interval: 2000 });
+          $("#carousel-pause").click(function(){
+              $("mycarousel").carousel('pause');
+          });
+          $("#carousel-play").click(function(){
+              $("#mycarousel").carousel('cycle');
+          });
+          //end of For the JS Controls Using JQuery
+      });
+  </script>
+  ```
+
+
+### JQuery Syntax
+
+* `$(selector).action()`
+  * `$` - define/acess JQuery
+  * `selector` can be specified using either one of the following:
+     * Any HTML element (e.g. `p`, `button`, etc.)
+     * Using the ID `#id` (e.g. `#myCarousel`)
+     * Using the Class `.class` (e.g. `.btn`, `.btn.btn-defualt`)
+     * Using the Attribute (e.g. `[href]`, `[data-toggle="tooltip"]`)
+     * Using `$(this)` for the current element
+     * etc..
+  * `(selector)` - for querying and finding HTML Elements
+  * `action()` - action performed on the element(s)
+     * e.g. `$(document).ready(function(){...});` - you can define your own function
+     * e.g. `$("p").hide(), $("#mycarousel").carousel('pause')` 
+
+#### JQuery Events
+
+* Events can also be specified in JQuery which is any user interaction on a web page causing DOM events
+  * **Mouse** - `click`, `dblclick`, `mouseenter`, `mouselevave`
+  * **Keyboard** - `keypress`, `keydown`, `keyup`
+  * **Form** - `submit`, `change`, `focus`, `blur`
+  * **Document, Window** - `load`, `resize`, `scroll`, `unload`
+* JQuery Event Methods: `ready()`, `click()`, `dblclick()`, `mousedown()`, `on()`
