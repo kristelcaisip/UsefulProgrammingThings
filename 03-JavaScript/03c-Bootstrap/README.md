@@ -584,6 +584,52 @@
   <!-- end of Adding Modal - NavBar -->
   <!-- end of Adding Modal -->
   ```
+  
+### Carousel
+
+* Component that allows the inclusion of a slideshow with captions
+* Manual controls for the carousel
+```
+<!-- Adding a Carousel -->
+<div id="mycarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <img class="d-block img-fluid" src="img/uthappizza.png" alt="uthapizza">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">£4.99</span></h2>
+                <p class="d-non d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Alberto</h2>
+                <p class="d-non d-sm-block">The head chef of this company.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Buffet <span class="badge badge-pill badge-secondary">£11.99</span></h2>
+                <p class="d-non d-sm-block">Buffet, who does not like a buffet???</p>
+            </div>
+        </div>
+        <!-- Adding Carousel Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mycarousel" data-slide-to="1"></li>
+            <li data-target="#mycarousel" data-slide-to="2"></li>
+        </ol>
+        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+<!-- end of Adding a Carousel -->
+```
       
 ## Bootstrap and JavaScript Components Overview
 
