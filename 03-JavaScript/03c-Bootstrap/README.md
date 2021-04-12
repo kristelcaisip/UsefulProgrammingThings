@@ -658,52 +658,121 @@
   * Effects and Animations
   * AJAX
 * Bootstrap JS Components build upon JQuery
-* Usage:
-  ```
-  <!-- Adding Carousel Indicators -->
-  <ol class="carousel-indicators">
-      <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#mycarousel" data-slide-to="1"></li>
-      <li data-target="#mycarousel" data-slide-to="2"></li>
-  </ol>
-  <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-  </a>
-
-  <!-- Adding JavaScript based controls using JQuery -->
-  <!-- This is related to "JS Controls Using JQuery"-->
-  <div class="btn-group" id="carouselButton">
-      <button class="btn btn-danger btn-sm" id="carousel-pause">
-          <span class="fa fa-pause"></span>
-      </button>
-      <button class="btn btn-danger btn-sm" id="carousel-play">
-          <span class="fa fa-play"></span>
-      </button>
-  </div>
-  <!-- end of Adding JavaScript based controls using JQuery -->
+* Usage: 
+  * Leveraging JavaScript-based controls that are provided for the Bootstrap JavaScript components in order to control the behaviour of the components
   
-  ...
-  
-  <!-- Using a bit of JQuery-->
-  <script>
-      $(document).ready(function(){
-          
-          //For the JS Controls Using JQuery
-          $("#mycarousel").carousel({ interval: 2000 });
-          $("#carousel-pause").click(function(){
-              $("mycarousel").carousel('pause');
-          });
-          $("#carousel-play").click(function(){
-              $("#mycarousel").carousel('cycle');
-          });
-          //end of For the JS Controls Using JQuery
-      });
-  </script>
-  ```
+    ```
+    <!-- Adding Carousel Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mycarousel" data-slide-to="1"></li>
+        <li data-target="#mycarousel" data-slide-to="2"></li>
+    </ol>
+    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
 
+    <!-- Adding JavaScript based controls using JQuery -->
+    <!-- This is related to "JS Controls Using JQuery"-->
+    <div class="btn-group" id="carouselButton">
+        <button class="btn btn-danger btn-sm" id="carousel-pause">
+            <span class="fa fa-pause"></span>
+        </button>
+        <button class="btn btn-danger btn-sm" id="carousel-play">
+            <span class="fa fa-play"></span>
+        </button>
+    </div>
+    <!-- end of Adding JavaScript based controls using JQuery -->
+
+    ...
+
+    <!-- Using a bit of JQuery-->
+    <script>
+        $(document).ready(function(){
+
+            //For the JS Controls Using JQuery
+            $("#mycarousel").carousel({ interval: 2000 });
+            $("#carousel-pause").click(function(){
+                $("mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+            //end of For the JS Controls Using JQuery
+        });
+    </script>
+    ```
+    * Improving the previous code by having one button to pause and play the carousel animation
+    ```
+    <!-- Adding an Enhanced Carousel -->
+    <div id="myEnhancedCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img class="d-block img-fluid" src="img/uthappizza.png" alt="uthapizza">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">£4.99</span></h2>
+                    <p class="d-non d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Alberto</h2>
+                    <p class="d-non d-sm-block">The head chef of this company.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Buffet <span class="badge badge-pill badge-secondary">£11.99</span></h2>
+                    <p class="d-non d-sm-block">Buffet, who does not like a buffet???</p>
+                </div>
+            </div>
+            <!-- Adding Carousel Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myEnhancedCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myEnhancedCarousel" data-slide-to="1"></li>
+                <li data-target="#myEnhancedCarousel" data-slide-to="2"></li>
+            </ol>
+            <a class="carousel-control-prev" href="#myEnhancedCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myEnhancedCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+            <!-- Adding JavaScript based controls using JQuery -->
+            <!-- This is related to "JS Controls Using JQuery"-->
+            <button class="btn btn-danger btn-sm" id="enhancedCarouselButton">
+                <span id="carousel-button-icon" class="fa fa-pause"></span>
+            </button>
+            <!-- end of Adding JavaScript based controls using JQuery -->
+
+        </div>
+    </div>
+    <!-- end of Adding an Enhanced Carousel -->
+                
+    ...
+    
+    // For the Enhanced Carousel
+    $("#myEnhancedCarousel").carousel({ interval: 1000 });
+    $("#enhancedCarouselButton").click(function(){
+        if($('#enhancedCarouselButton').children("span").hasClass('fa-pause')){
+            $("#myEnhancedCarousel").carousel('pause');
+            $("#enhancedCarouselButton").children("span").removeClass('fa-pause');
+            $("#enhancedCarouselButton").children("span").addClass('fa-play');
+        }
+        else if ($("#enhancedCarouselButton").children("span").hasClass('fa-play')){
+            $("#myEnhancedCarousel").carousel('cycle');
+            $("#enhancedCarouselButton").children("span").removeClass('fa-play');
+            $("#enhancedCarouselButton").children("span").addClass('fa-pause');
+        }
+    });
+    // end of For the Enhanced Carousel
+    ```
 
 ### JQuery Syntax
 
