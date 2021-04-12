@@ -479,6 +479,112 @@
         </div>
       </div>
       ```
+      
+### Information Overlay using Tooltips, Popovers and Modals
+
+* There are three different constructs available in Bootstrap to enable display information to the users overlaying the content of your web page.
+  * They reveal content upon interacting with an element on the page
+  * Informmation displayed as an overlay
+  * Order of Flexibility (i.e. easiest to more complex to implement as well as the most to least limitations)
+    * Tooltip -> Popover -> Modal
+
+#### Tooltips
+
+* A message pops out on the screen with some additional information when you **mouse over** an element (e.g. hovering your mouse over a button or an image)
+  * Used to provide some information that would let the user know after interacting with an element
+* Usage:
+  * You would need an element to apply the tooltip on
+  * And a JavaScript that defines what happens when you mouseover a tooltip
+    
+    ```
+    <!-- Add a button with Tooltip -->
+    <!-- This makes use of the script at the bottom of the page "Script with Tooltip"-->
+    <div class="col-12 col-sm align-self-center">
+        <a role="button" class="btn btn-block nav-link btn-warning" 
+        data-toggle="tooltip" data-html="true" title="Or Call us at <br/><strong>+44123456231</strong>" 
+        data-placement="bottom"
+        href="#reserveform">Reserve Table</a>
+    </div>
+    <!-- Add a button with Tooltip -->
+    
+    ...
+    
+    <!-- Script with Tooltip -->
+    <!-- Using a bit of -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <!-- end of Script with Tooltip -->
+    ```
+
+#### Popovers
+
+* A message pops out on the screen with some additional information when you **interact** with an element (e.g. click on a button or an image)
+
+#### Modals
+
+* Provides a more detailed information compared to the other two
+* It contains a **header**, **body**, and a **footer**
+* Bootstrap grid can be used in the body to organise the content
+* Tips: 
+  * All modals must be added at the top of the page
+* Usage:
+  * Set up the Modal content
+  * Apply it to a component (i.e. a Login button or link)
+  ```
+  <!-- Adding Modal -->
+  <!-- This is related to "Adding Modal - Navbar" -->
+  <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <!-- Title of the Modal -->
+                  <h4 class="modal-title">Login</h4>
+                  <button type="button" class="close" data-dismiss="modal">
+                      &times;
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="form-row">
+                          <div class="form-group col-sm-4">
+                              <label class="sr-only" for="exampleInputEmail3">Email Address</label>
+                              <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                          </div>
+                          <div class="form-group col-sm-4">
+                              <label class="sr-only" for="examplePassword3">Email Password</label>
+                              <input type="email" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Enter Password">
+                          </div>
+                          <div class="col-sm-auto">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox">
+                                  <label class="form-check-label">Remember me</label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                          <button type="submit" class="btn btn-primary btn-sm ml-1">Sign-in</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Adding Modal - NavBar -->
+  <!-- Clicking this will reveal the modal window on the page -->
+  <!-- Applying the Modal into a component -->
+  <span class="navbar=text">
+      <a data-toggle="modal" data-target="#loginModal">
+          <span class="fa fa-sign-in"></span> Login
+      </a>
+  </span>
+  <!-- end of Adding Modal - NavBar -->
+  <!-- end of Adding Modal -->
+  ```
+      
 ## Bootstrap and JavaScript Components Overview
 
 ![image](../img/Bootstrap_and_Javascript.png)
