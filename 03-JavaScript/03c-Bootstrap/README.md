@@ -813,11 +813,12 @@
   * Bootstrap 3 used Less
   * Bootstrap 4 use Sass
 * Requires compiling it into a CSS Format
-  * **Less:** `$ lessc [NAME_OF_LESS_FILE] [NAME_TO_CALL_COMPILED_CSS_FILE]`
-    * Running that command will compile the Less file into a CSS file format
-    * Requires installing the less `$ sudo npm install -g less@latest`
-  * **Scss:** ``
-    * Running that command will compile the Scss file into a CSS file format
+  * **Less:** 
+    * Requires the following:
+      * Installing the less `$ sudo npm install -g less@latest`
+      * Running the command `$ lessc [NAME_OF_LESS_FILE] [NAME_TO_CALL_COMPILED_CSS_FILE]`
+        * This will compile the Less file into a CSS file format
+  * **Scss:** 
     * Requires the following: 
       * Installing the less `$ npm install --save-dev node-sass@latest`
         * Running the above command will 1) download and install the Scss dependencies and 2) update the `package.json` to include this dependency
