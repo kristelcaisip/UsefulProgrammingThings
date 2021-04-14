@@ -956,3 +956,74 @@
 * Imports
   * `@import "foo"` for both Less and Sass
 
+## Building and Deployment
+
+* Automating a lot of repetitive tasks that can be re-used through Scripts
+* Some examples of tasks that can be automated:
+  * CSS Tasks
+    * Compiling Sass or Less into CSS
+    * Running Autoprefixer to add any vendor prefixes that are needed
+    * Mnification: removing unnecessary characters (white spaces, newlines, comments) from source code without compromising functionality
+    * Concatenation
+  * JavaScript Tasks
+    * JSHint: Checking JavaScript code for errors and potential problems (static code analysis)
+    * Concatenation
+    * Uglification: minification + mangling (reduce local variables to single letters)
+    * Rechecking for errors
+  * Others
+    * Images: Optimizing files to reduce file size
+    * Watch: watching for changes in files and automatically re-running tasks
+    * Server and Livereload
+    * Testing
+    * Building your site for deployment
+* There are different ways to Automate the deployment of a website
+  * NPM Scripts
+  * Task Runners such as Gulp and Grunt
+
+### NPM Scripts
+
+* This can be found in `scripts` section of the `package.json` file of your project
+  ```
+  ...
+  "scripts": {
+    "start": "npm run lite", 
+    "test": "echo \"Error: no test specified \" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/"
+  }
+  ...
+  ```
+  * There are many of these supported
+    * `start`: run by the `npm start` command
+       * Using `npm run` to run scripts
+         * e.g. `npm run scss` and `npm run lite`
+* Some useful npm modules that can be used for automation
+  * On Change Module
+    * Watch for changes to the `styles.scss` and automatically compile it to the `css` file
+    * Setup:
+      * Download and install to your projects node-modules package
+        `$ npm install --save-dev onchange@latest`
+      * Add the script item into the `script` section of the `package.json`
+        ```json
+        "watch:scss": "onchange 'css/*.scss' -- npm run scss"       # for mac
+        "watch:scss": "onchange \"css/*.scss\" -- npm run scss"     # for windows
+        ```
+      * Update the `start` script
+        `"start": "npm run watch:all",`
+      * Then start it to watch for changes in the SCSS file and compile it to the CSS
+        `$ npm start`
+  * Parallel Shell Module
+    * Run multiple NPM Scripts in parallel
+    * NOTE: You might need to downgrade to 3.0.1 as an error will be returned or use the alternative `npm-run-all` (see https://stackoverflow.com/questions/51060296/how-do-you-correctly-use-parallelshell-with-npm-scripts)
+    * Setup: 
+      * Download and install to your projects node-modules package
+        `$ npm install --save-dev parallelshell@latest`
+      * Add the script item into the `script` section of the `package.json`
+        ```json
+        "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"         # for mac
+        "watch:all": "parallelshell \"npm run watch:scss \" \"npm run lite\""    # for windows
+        ```
+      * Update the `start` script
+        `"start": "npm run watch:all",`
+      * Then start it to watch for changes in the SCSS file and compile it to the CSS
+        `$ npm start`
