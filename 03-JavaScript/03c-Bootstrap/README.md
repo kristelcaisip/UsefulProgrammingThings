@@ -1027,3 +1027,76 @@
         `"start": "npm run watch:all",`
       * Then start it to watch for changes in the SCSS file and compile it to the CSS
         `$ npm start`
+
+## Task Runners
+
+* Configure tasks once, and rerun it automatically as many times as needed
+* NPM Scripts written in `package.json` to execute tasks
+* Several task runners out there: 
+  * Grunt (https://gruntjs.com/)
+  * Gulp (https://gulpjs.com/)
+  * Cake (https://cakebuild.net/)
+  * Brunch (https://brunch.io/)
+  * Broccoli (https://broccoli.build/about.html)
+* Build Systems for the web
+* Grunt and Gulp are the 2 most used task runners for JavaScript
+
+### Grunt
+
+* Configuration Over Code
+  * This is a configuration-based task runner
+  * You install various Grunt plugins for the various tasks and then configure them in the `Grunt file`
+* Setup:
+  * Install Grunt globally `$ sudo npm install -g grunt-cli@latest`
+  * Install Grunt locally
+    * Navigate to your project
+    * Type in `$ npm install grunt@latest
+  * Go into your project directory and create a new file `Gruntfile.js`, this is where all the configuration will go into and enter the following:
+    ```json
+    'use strict';
+
+     module.exports = function(grunt) {
+
+        grunt.initConfig({
+
+        });
+    }
+    ```
+  * Setup some Grunt plugins to enable the tasks
+    * For this example, it will be converting SCSS code into CSS code
+      * Install the following Grunt modules by typing these commands on the terminal
+        ```
+        npm install --save-dev grunt-sass@latest
+        npm install --save-dev time-grunt@latest jit-grunt@latest
+        ```
+  * Update the `Gruntfile` and add the plugins you just installed
+    ```
+    'use strict';
+
+     module.exports = function(grunt) {
+
+        // Time how long tasks take. Can help when optimizing build times
+        require('time-grunt')(grunt);
+
+        // Automatically load required Grunt tasks
+        require('jit-grunt')(grunt);
+
+        // Define the configuration for all the tasks
+        grunt.initConfig({
+            sass: {
+                dist: {
+                    files: {
+                        'css/styels.css': 'css/styles.scss'
+                    }
+                }
+            }
+        });
+
+        grunt.registerTask('css', ['sass']);
+    }
+    ```
+  * Then run `$ grunt css` to run the tasks
+### Gulp
+
+* Code Over Configuration
+* Setup:
