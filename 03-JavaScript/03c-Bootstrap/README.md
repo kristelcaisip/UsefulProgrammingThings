@@ -1096,6 +1096,16 @@
     }
     ```
   * Then run `$ grunt css` to run the tasks
+* Other examples that can be automated:
+  * Cleaning up the distribution folder, copying fonts to the distribution folder, minification of images, and build and prepare the distribution folder
+    * Setup:
+      * Install the configuration for copy and clean
+        ```
+        $ npm install grunt-contrib-copy@latest --save-dev
+        $ npm isntall grunt-contrib-clean@latest --save-dev
+        ```
+  * After the set-up, you can run `$ grunt build`
+    * Running this will create the dist folder with the files structured correctly to be distributed to a server to host your website
 ### Gulp
 
 * Code Over Configuration
