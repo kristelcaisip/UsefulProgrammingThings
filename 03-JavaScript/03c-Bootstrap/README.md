@@ -1109,4 +1109,24 @@
 ### Gulp
 
 * Code Over Configuration
+  * It uses a code-based of configuring tasks which means you would need to setup: 
+    * Set up the task to type `gulp.task`
+    * Set up at task name `[TASK_NAME` (e.g. `sass`
+    * Set up a function for this tas
+    ```
+    gulp.task('sass', function (){
+        return gulp.src('./css/*.scss')
+                .pipe(sass().on('error', sass.logError))
+                .pipe(gulp.dest('./css'));
+    });
+    ```
+      * **Gulp Streams** - structure of the function is specified
+        * `gulp.src()`: function that takes file globs and creates a stream of objects that represent the files
+        * `pipe()`: allows the stream to be piped through a function (i.e. process something)
+        * `gulp.dest()`: specifies the destination of the changed files
 * Setup:
+  * Install Gulp CLI `$ sudo npm install -g gulp-cli@latest`
+  * Install Gulp in the local project `$ npm install gulp@latest`
+  * Install the Gulp Sass plug-in to configure Sass and Browser Sync conversion task `$ npm install --save-dev gulp-sass@latest browser-sync@latest`
+  * Create the Gulp file
+  * 
