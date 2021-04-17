@@ -319,6 +319,23 @@ $ yarn start                              // run the application and it should o
    }
    ```
 
+### Presentational Components
+
+* Mainly concerned with redering the "view"
+  * How things look (markup, styles)
+* Render the view based on the data that is passed to them in props
+* Do not maintain their own local state
+  * Can be relaxed to maintain only UI State than data
+
+### Container Components
+
+* Responsible for making things work
+  * Data fetching, state updates
+* Making use of presentational components for rendering
+  * Can wrap presentational components in wrapping `divs`
+* Provide the data to the presentational components
+* Maintain the state and communicate with data sources
+
 ## JSX
 
 * Syntax extension to JavaScript
