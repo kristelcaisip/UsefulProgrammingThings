@@ -24,11 +24,16 @@
 
 ## Set-up
 
-* To use React, you would need `node` and `yarn` installed (https://yarnpkg.com/)
-   * You can use `npm` or `npx` but `yarn` is better and more stable (from experience)
-      * `npm` vs `npx`
-         * `npm` - Manager
-         * `npx` - Execute; a small utility that’s smart enough to run the right application when it’s called from within a project
+* To use React, you can either use:
+   * Yarn
+      * `yarn` is better and more stable (from experience) for React applications
+      * would need `node` and `yarn` installed (https://yarnpkg.com/)
+        * Install `yarn` as per the website instructions
+   * NPM or NPX
+      * You can use `npm` or `npx`
+        * `npm` vs `npx`
+           * `npm` - Manager
+           * `npx` - Execute; a small utility that’s smart enough to run the right application when it’s called from within a project
 
 ```
 $ npm install -g create-react-app         // it will install create-react-app globally (you might need sudo)
