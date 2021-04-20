@@ -197,14 +197,25 @@ $ yarn start                              // run the application and it should o
       * There are two ways of exporting classes
          * Adding it at the end of the class
            ```
+           class MyDefaultClass extends Component {
+              ...
+           }
+           export default MyDefaultClass;
+           
+           ---
+           
            class MyClass extends Component {
               ...
            }
-           export default MyClass;
+           export MyClass;
            ```
          * Adding it at the class declaration
            ```
-           export default class MyClass extends Component {
+           export default class MyDefaultClass extends Component {
+              ...
+           }
+           ---
+           export class MyClass extends Component {
               ...
            }
            ```
