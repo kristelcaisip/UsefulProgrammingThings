@@ -194,7 +194,21 @@ $ yarn start                              // run the application and it should o
    * Export it to make it useable to other modules
       * Components can be exported as a default or not default component
          * Default makes use of the `default` keyword
-   * Import the component where you need to use it
+      * There are two ways of exporting classes
+         * Adding it at the end of the class
+           ```
+           class MyClass extends Component {
+              ...
+           }
+           export default MyClass;
+           ```
+         * Adding it at the class declaration
+           ```
+           export default class MyClass extends Component {
+              ...
+           }
+           ```
+   * Import the component where you need to use it<br/>
       ![import](../img/importing_components.png)
       * Components that are **exported** as a `default` component must be **imported** as a `default` component
       * Non-default components must be enclosed in `{}`
