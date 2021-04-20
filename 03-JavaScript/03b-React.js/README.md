@@ -99,6 +99,28 @@ $ yarn start                              // run the application and it should o
    * i.e. split the UI into individual elements as independent and reusable piece
       * e.g. In a Web App you can have separate components for app (Root component), menu, header, footer
 * Each Component is independent and can be re-used on its own
+* Basic Structure of a Component:
+  ```
+  // import the React and Component
+  import React, { Component } from 'react';
+  
+  class MyOwnClass extends Component {
+      
+      // supply the props to the super class; this is required whenever a Class Component is defined
+      constructor (props) {
+          super(props);
+      }
+      
+      // returns the corresponding view for this component
+      render() {
+           return (
+           );
+      }
+  }
+  
+  // export your class so you can import this in another
+  export default MyOwnClass;
+  ```
 * Each Component would have: 
    * **View:**
       * How a component should be structured
@@ -160,7 +182,7 @@ $ yarn start                              // run the application and it should o
             <Menu dishes={this.state.dishes} />
             ```
          * Dish is available as **props** within the Dishdetail Component and can be accessed as `this.props.dish` and comments as `this.props.comments`
-* Tips for writing any **custom React Component**:
+* **custom React Component Conventions**:
    * You must always import `React` component in your class      
    * Name must be in PascalCase
       * Or at least begin with a capital letter
