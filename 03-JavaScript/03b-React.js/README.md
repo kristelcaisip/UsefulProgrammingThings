@@ -175,7 +175,115 @@ $ yarn start                              // run the application and it should o
    * **Props:**
       * A way to pass JSX attributes into a component as a single object
       * You can pass multiple attributes
+        * Props are arguments passed into React Components
+        * Props are passed to Components via HTML attributes
+      * Different ways can be used:
+        * The component receives the argument as a `props` object
+          ```
+          // The following would return "I am a Ford" on the page
+          import React from 'react';
+          import ReactDOM from 'react-dom';
+
+          class Car extends React.Component {
+            render() {
+              return <h2>I am a {this.props.brand}!</h2>
+            }
+          }
+
+          const myelement = <Car brand="Ford" />;
+          ReactDOM.render(myelement, document.getElementById('root'));
+
+          ```
+        * Pass data from one component to another, as parameters
+          ```
+          import React from 'react';
+          import ReactDOM from 'react-dom';
+
+          class Car extends React.Component {
+            render() {
+              return <h2>I am a {this.props.brand}!</h2>;
+            }
+          }
+
+          class Garage extends React.Component {
+            render() {
+              return (
+                <div>
+                <h1>Who lives in my Garage?</h1>
+                <Car brand="Ford" />
+                </div>
+              );
+            }
+          }
+
+          ReactDOM.render(<Garage />, document.getElementById('root'));
+
+          ```
+        * Send a non-string variable, put the variable inside the curly braces
+          ```
+          // This creates a variable named "carname" and send it to the Car component
+          import React from 'react';
+          import ReactDOM from 'react-dom';
+
+          class Car extends React.Component {
+            render() {
+              return <h2>I am a {this.props.brand}!</h2>;
+            }
+          }
+
+          class Garage extends React.Component {
+            render() {
+              const carname = "Ford";
+              return (
+                <div>
+                <h1>Who lives in my Garage?</h1>
+                <Car brand={carname} />
+                </div>
+              );
+            }
+          }
+
+          ReactDOM.render(<Garage />, document.getElementById('root'));
+          ```
+        * Send an object, put in inside the curly braces
+          ```
+          import React from 'react';
+          import ReactDOM from 'react-dom';
+
+          class Car extends React.Component {
+            render() {
+              return <h2>I am a {this.props.brand.model}!</h2>;
+            }
+          }
+
+          class Garage extends React.Component {
+            render() {
+              const carinfo = {name: "Ford", model: "Mustang"};
+              return (
+                <div>
+                <h1>Who lives in my garage?</h1>
+                <Car brand={carinfo} />
+                </div>
+              );
+            }
+          }
+          ReactDOM.render(<Garage />, document.getElementById('root'));
+          ```
+        * If your component has a constructor function, the props should always be passed to the constructor and also to the `React.Component` via the `super()` method
+          ```
+          class Car extends React.Component {
+            constructor(props) {
+              super(props);
+            }
+            render() {
+              return <h2>I am a {this.props.model}!</h2>;
+            }
+          }
+
+          ReactDOM.render(<Car model="Mustang"/>, document.getElementById('root'));
+          ```
       * Props cannot be modified within the component
+ 
       * Examples:
          * Dishes are available as **props** within the Menu Component and can be accessed as `this.props.dishes`
             ```
