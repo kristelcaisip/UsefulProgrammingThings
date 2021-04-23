@@ -52,12 +52,21 @@
       | Nestable            | Yes                                     | Yes                                               | Yes                                               | Yes                                               | Yes                                               |
       | Offsets             | Yes                                     | Yes                                               | Yes                                               | Yes                                               | Yes                                               |
       * The table above shows the default values of Bootstrap Grid division
-      * Bootstrap divides the entire screen width range into 5 classes:
+      * Bootstrap divides the entire screen width range into the following classes:
         1) `default` targets all screen sizes (i.e. extra small to extra large)
-        2) `sm` for small
-        3) `md` for medium
-        4) `lg` for large
-        5) `xl` for exta large screen sizes
+        2) `xs` for extra small (i.e. for phones - screens less than 768px wide)
+        3) `sm` for small (i.e. for tablets - screens equal to or greater than 769px wide)
+        4) `md` for medium (i.e. for small laptops - screens equal to or greater than 992px wide)
+        5) `lg` for large (i.e. for laptops and desktops - screens equal to or greater than 1200px wide)
+        6) `xl` for exta large screen sizes
+    * Grid System Rules
+      * Rows must be placed within a `.container` (fixed width) or `.container-fluid` (full-width) for proper alignment and padding
+      * Use `rows` to create horizontal groups of columns
+      * Contents should be placed within columns, and only columns may be immediate children of rows
+      * Predefined classes like `.row` and `.col-sm-4` are available for quickly making grid layouts
+      * Columns create gutters (gaps between column content) via padding. That padding is offset for the first and last column via negative margin on `.rows`
+      * Grid columns are created by specifying the number of 12 available columns you wish to span. e.g. three equal columns would use three .col-sm-4
+      * Columns widths are in percentage, so they are always fluid and sized realtive to their parent element
     * Usage: `.col-*, .col-sm-*, .col-md-*, .col-lg-*`
       * the `*` can be replaced with 
         * a number to specify how much column size it will occupy; must total to 12
