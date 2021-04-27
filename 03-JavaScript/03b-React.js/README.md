@@ -535,4 +535,14 @@ $ yarn start                              // run the application and it should o
       import './index.css'
       ```
     * Then you can import the Boostrap components where required
-    
+
+---
+
+# Useful Extensions
+
+### Reactjs Code Snippet
+
+* By charalampos karypidis
+* This provies some snippets that triggers something
+  * e.g. `rcc` + Tab will create a skeleton for a Component
+* Full list can be found in [Visual Studio Code Marketplace - React Snippets](https://tinyurl.com/5x3rtjb9)
