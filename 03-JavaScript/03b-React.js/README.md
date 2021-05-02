@@ -123,6 +123,7 @@ $ yarn start                              // run the application and it should o
   // export your class so you can import this in another
   export default MyOwnClass;
   ```
+* Each Component must be exported
 * Each Component would have: 
    * **View:**
       * How a component should be structured
@@ -470,6 +471,8 @@ $ yarn start                              // run the application and it should o
 * Function Component must: 
    * Have a Function declaration
    * Return the JSX
+* First argument must be `props`
+  * This allows you to receive data from components above
 * Newer versions of React is by default, created as a Function Component
 * Examples:
    ```
@@ -503,6 +506,7 @@ $ yarn start                              // run the application and it should o
 * Syntax extension to JavaScript
    * Almost like a template language (i.e. HTML within JavaScript)
    * You write the HTML the normal way and the JavaScript must always be enclosed in `{...}`
+* Webpack is the librarty that converts the React Components into a single file called `bundle.js`
 * [Babel.js](https://babeljs.io) is the one that converts JSX into JavaScript
 * Recommended to use in React to describe the View/UI should look like
 * A component must always return back a JSX
