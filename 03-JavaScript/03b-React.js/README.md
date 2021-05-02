@@ -462,9 +462,15 @@ $ yarn start                              // run the application and it should o
    export default [CLASS_NAME];
    ```
 
+### Classification of Components
 
-### Functional Component
+#### Functional Component
 
+* Mainly concerned with rendering the **View**
+  * How things look (markup, styles)
+* Render the view base on the data that is passed to them in `props`
+* Do not maintain their own local state
+  * Just the UI State and not the data
 * Function can be in a class as a local function or it can just be a standalone component
    * It does not need the `function` keyword in before the function name
    * It should have `this.[FUNCTION_NAME]` notation since it is a local function
@@ -483,23 +489,27 @@ $ yarn start                              // run the application and it should o
       );
    }
    ```
-
-### Presentational Components
-
-* Mainly concerned with redering the "view"
-  * How things look (markup, styles)
-* Render the view based on the data that is passed to them in props
-* Do not maintain their own local state
-  * Can be relaxed to maintain only UI State than data
-
-### Container Components
+   
+#### Container Components
 
 * Responsible for making things work
   * Data fetching, state updates
 * Making use of presentational components for rendering
   * Can wrap presentational components in wrapping `divs`
 * Provide the data to the presentational components
+  * In a form of `props`
 * Maintain the state and communicate with data sources
+* Mainly use these components to deal with the state, provide the data and handle user interactions
+
+
+#### Presentational Components
+
+* Mainly concerned with redering the "view"
+  * How things look (markup, styles)
+* Render the view based on the data that is passed to them in props
+* Do not maintain their own local state
+  * Can be relaxed to maintain only UI State than data
+* Mainly use these components for the look and feel of your app
 
 ## JSX
 
