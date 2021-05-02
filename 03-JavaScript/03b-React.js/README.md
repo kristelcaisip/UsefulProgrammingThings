@@ -99,6 +99,8 @@ $ yarn start                              // run the application and it should o
    * i.e. split the UI into individual elements as independent and reusable piece
       * e.g. In a Web App you can have separate components for app (Root component), menu, header, footer
 * Each Component is independent and can be re-used on its own
+* Each Component can contain other components but will always eventually roll-up into an `App` component
+* Each Component must always return a `JSX`
 * Basic Structure of a Component:
   ```
   // import the React and Component
@@ -500,8 +502,10 @@ $ yarn start                              // run the application and it should o
 
 * Syntax extension to JavaScript
    * Almost like a template language (i.e. HTML within JavaScript)
+   * You write the HTML the normal way and the JavaScript must always be enclosed in `{...}`
 * [Babel.js](https://babeljs.io) is the one that converts JSX into JavaScript
 * Recommended to use in React to describe the View/UI should look like
+* A component must always return back a JSX
 * You cannot use caps in JSX --it will not compile!!
 * It makes use of a `className` instead of `class`
    ```
