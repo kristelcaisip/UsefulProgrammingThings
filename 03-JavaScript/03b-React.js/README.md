@@ -399,7 +399,13 @@ $ yarn start                              // run the application and it should o
       * Deprecated Methods (NOTE: DO NOT USE!!):
          * `componentWillMount()`
    * **Updating**
-      * 
+      * Called when a component is being re-rendered
+        * Can be caused by changes to props or state
+        * `getDerivedStateFromProps()` - associated with mounting
+        * `render()` - associated with mounting; called everytime the component is re-rendered
+        * `shouldComponentUpdate()` - will return a Boolean variable; false if the component never gets updated
+        * `getSnapshotBeforeUpdate()` - is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed
+        * `componentDidUpdate()` - is invoked immediately after updating occurs. This method is not called for the initial render
    * **Un-Mounting**
 
 ### Root Component
