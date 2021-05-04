@@ -390,8 +390,9 @@ $ yarn start                              // run the application and it should o
          }
          ```
 * **React Component Lifecycle**
+   * React Components goe through the following lifecycle stages: **Mounting**, **Updating** and **Un-mounting**. And each stage has several lifecycle methods.
    * **Mounting**
-      * These are called when an instance of a component is created and inserted into the DOM
+      * These are called when an instance of a component is **created** and **inserted** into the DOM
          * `constructor()`
          * `getDerivedStateFromProps()`
          * `render()`
@@ -399,13 +400,15 @@ $ yarn start                              // run the application and it should o
       * Deprecated Methods (NOTE: DO NOT USE!!):
          * `componentWillMount()`
    * **Updating**
-      * Called when a component is being re-rendered
-        * Can be caused by changes to props or state
+      * Called when a component is being re-rendered caused by **changes to props or state**
         * `getDerivedStateFromProps()` - associated with mounting
         * `render()` - associated with mounting; called everytime the component is re-rendered
         * `shouldComponentUpdate()` - will return a Boolean variable; false if the component never gets updated
         * `getSnapshotBeforeUpdate()` - is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed
         * `componentDidUpdate()` - is invoked immediately after updating occurs. This method is not called for the initial render
+        * Deprecated Methods (DO NOT USE!!)
+          * `componentWillReceiveProps()`
+          * `componentWillUpdate()`
    * **Un-Mounting**
 
 ### Root Component
@@ -433,8 +436,10 @@ $ yarn start                              // run the application and it should o
 * A Class component can have multiple functions
 * Class Component must: 
    * Import the React component
-   * Extend the class `Component` (found in the core `react`) framework
-   * Implement the `render()`
+   * Extend the class `Component` (found in the core `react`) framework to get the class components
+   * Implement the `render()` to return the view
+   * You can define the local state
+   * You can use Lifecycle Hooks
    * Return the JSX
    * Be exported to be re-usable to other modules; it can be done in two ways:
       * Within the Class declaration
@@ -472,8 +477,10 @@ $ yarn start                              // run the application and it should o
 
 #### Functional Component
 
-* Mainly concerned with rendering the **View**
+* Mainly concerned with rendering the **View** and a lot simpler to implement
   * How things look (markup, styles)
+* This is typically used for implementing components that work on only using their props that are sent by their parent
+* It simply receives a `props` object as a parameter
 * Render the view base on the data that is passed to them in `props`
 * Do not maintain their own local state
   * Just the UI State and not the data
@@ -482,7 +489,8 @@ $ yarn start                              // run the application and it should o
    * It should have `this.[FUNCTION_NAME]` notation since it is a local function
 * Function Component must: 
    * Have a Function declaration
-   * Return the JSX
+   * Have a JavaScript function that returns a React element, or a collection of React elements that define the view
+      * Return the JSX
 * First argument must be `props`
   * This allows you to receive data from components above
 * Newer versions of React is by default, created as a Function Component
