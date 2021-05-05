@@ -437,13 +437,26 @@ $ yarn start                              // run the application and it should o
 * Class Component must: 
    * Import the React component
    * Extend the class `Component` (found in the core `react`) framework to get the class components
+      ```
+      import React { Component } from 'react';
+      ...
+      class [CLASS_NAME] extends Component {..}
+      ```
    * Implement the `render()` to return the view
    * You can define the local state
    * You can use Lifecycle Hooks
    * Return the JSX
    * Be exported to be re-usable to other modules; it can be done in two ways:
-      * Within the Class declaration
-      * OR added right at the end of the class
+      ```
+      //Within the Class declaration
+      export default class [CLASS_NAME] extends Component {...}
+      
+      //OR added right at the end of the class
+      clas [CLASS_NAME] extends Component {
+        ...
+      }
+      export default [CLASS_NAME]
+      ```
    * It must be imported inside the class where it will be used
 * Examples:
    ```
@@ -487,6 +500,13 @@ $ yarn start                              // run the application and it should o
 * Function can be in a class as a local function or it can just be a standalone component
    * It does not need the `function` keyword in before the function name
    * It should have `this.[FUNCTION_NAME]` notation since it is a local function
+* Function can be written in two ways:
+  ```
+  function [FUNCTION_NAME](props) {...}
+  
+  //using the arrow notation
+  const [CONST_NAME] = (props) => {...}
+  ```
 * Function Component must: 
    * Have a Function declaration
    * Have a JavaScript function that returns a React element, or a collection of React elements that define the view
