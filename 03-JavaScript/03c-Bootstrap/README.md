@@ -213,8 +213,13 @@
   ```
   // fetch font-awesome classes
   $ npm install font-awesome@latest --save
-  // install it into your project
+  OR
+  $ yarn add font-awesome@latest
+  
+  // install it into your project for social media buttons
   $ npm install bootstrap-social@latest --save
+  OR
+  $ yarn add bootstrap-social@latest
   ```
 * Usage
   * You can either use `<span>` or `<i>` for this and mix the `bootstrap-social` with `font-awesome` classes
