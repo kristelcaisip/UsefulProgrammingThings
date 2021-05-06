@@ -590,6 +590,27 @@ $ yarn start                              // run the application and it should o
 
 ---
 
+# Virtual DOM
+
+* Browser DOM is a Browser Object
+* Virtual DOM is a React Object
+  * Lightweight representation of the Browser DOM
+  * In-memory tree data structure of plain JS objects
+  * Manipulations extremely fast compared to modifying the browser DOM
+  * Created completely from scratch everytime `setState()` is called
+
+## Updating the DOM
+
+* **Diffing Algorithm** will detect those nodes that are changed
+  * Updates the entire sub-tree if diffing detects that two elements are of different types
+  * Using **key** you can hint child elements as stable
+    * No need to re-render where keys do not change
+* **React Fiber** new reconciliation algorithm in React 16
+  * Incremental rendering
+  * A lot faster when doing the diffing
+
+---
+
 # Useful Extensions
 
 ### Reactjs Code Snippet
