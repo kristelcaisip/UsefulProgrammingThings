@@ -571,8 +571,8 @@ $ yarn start                              // run the application and it should o
    <button onClick={increment()}/>      //invoked; called when the page is loaded
    <button onClick={increment}>         //referenced; called whenever the button is clicked
    ```
-   
- ## React Applications with Bootstrap
+
+## React Applications with Bootstrap
  
  * Setup: 
     * Install Bootstrap, ReactStrap and React-Popper in you project
@@ -587,6 +587,58 @@ $ yarn start                              // run the application and it should o
       import './index.css'
       ```
     * Then you can import the Boostrap components where required
+
+## React Router
+
+* Collection of Navigational Components
+  * Enables navigation among views
+  * Router components, route matching components, and navigation components
+* Uses a browser-based, bookmarkable URLs as an instruction to navigate to a client-generated view in your web app
+  * Can also pass along optional parameters
+  * Each view will have its own associated URL
+* `react-router-dom`, **Router Component** is made available `<BrowserRouter>`
+  * Creates specialized history object
+  * Also `<HashRouter>` if you are using a static file server
+  * Enclose your app in `BrowserRouter`
+* Setup:
+  * Install `react-router-dom`
+    ```
+    $ yarn add react-router-dom@latest
+    $ npm install react-router-dom@latest --save
+    ```
+* Usage: 
+  * Import Browser Router and then enclose the component where this will be used in
+    ```
+    imort { BrowserRouter } from 'react-router-dom';
+    
+    ...
+    
+    <BrowserRouter>
+      <div>
+        <Main />
+      </div>
+    </BrowserRouter>
+    ```
+    
+
+### Route Matching
+
+* Route Matching Components: `<Route>` and `<Switch>`
+  * `<Route>`'s path prop enables specification of the current location's pathname
+  * `<Route>`'s component prop specifies the corresponding view for the location 
+  * Using exact attribute ensures that the path must be exactly matched
+  * `<Redirec>` enables the default route specification
+    * Uses the alternative route if none of the path matches
+  * `<Switch>` enables grouping together several routes
+    * You can have multiple routes and these can be grouped together using a `Switch`
+    * Will iterate over all its children and find the first one that matches the path
+
+### Navigation
+
+* This is supported through `<Link>` and `<NavLink>` components
+  * `<Link>` creates links in your application
+    * This will render as `<a>` in the HTML
+  * `<NavLink>` also attaches the *active class* to the link when its prop matches the current location
 
 ---
 
