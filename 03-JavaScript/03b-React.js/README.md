@@ -639,6 +639,8 @@ $ yarn start                              // run the application and it should o
   * `<Link>` creates links in your application
     * This will render as `<a>` in the HTML
   * `<NavLink>` also attaches the *active class* to the link when its prop matches the current location
+* `Link` and `NavLink` must usually be enclosed with `BrowserRouter`
+  * Otherwise, you get an error message "Invariant Valuation"
 
 ---
 
