@@ -235,6 +235,11 @@
         </div>
     </div>
     ```
+  * In React, it would be importing it, possibly in the `index.js` file
+    ```
+    import 'font-awesome/css/font-awesome.min.css';
+    import 'bootstrap-social/bootstrap-social.css';
+    ```
 
 #### Button Groups
 
