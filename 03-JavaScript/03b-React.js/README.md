@@ -642,6 +642,35 @@ $ yarn start                              // run the application and it should o
 * `Link` and `NavLink` must usually be enclosed with `BrowserRouter`
   * Otherwise, you get an error message "Invariant Valuation"
 
+### Parameters
+
+* Typical React Router have paths that are specified as URL
+  ```
+  <Switch>
+    <Route path="/home" component={HomePage} />
+    ...
+  </Switch>
+  ```
+* These paths can also carry parameter values
+  ```
+  <Switch>
+    <Route path="/menu:id" component={Menu} />
+    ...
+  </Switch>
+  ```
+* It can also be specified using a Link parameter while specifying the link
+  ```
+  <Link to{`/menu/${dish.id}`}>
+  ```
+* Route passes three props to the component:
+  * `match` - carries the route parameters inside as its own properties
+    * This can be used to extract the parameter that is passed in the URL
+    * Provides the information abou how a `<Route path>` matched the URL
+      * `params:` an object that contains key/value pair parsed from the URL corresponding to the dynamic segments of the path
+        * e.g. path with `/menu/:id`, then `/menu/42` will result in `match.params.id` being equal to "42"
+  * `location` - TBA
+  * `history` - TBA
+
 ---
 
 # Virtual DOM
