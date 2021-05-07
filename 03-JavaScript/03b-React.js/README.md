@@ -665,6 +665,30 @@ $ yarn start                              // run the application and it should o
 
 ---
 
+# Single Page Applications
+
+* Web Application or a website that fits in a single page
+  * The whole page is not reloaded
+  * UX like desktop/native application
+  * Most resources are retrieved with a single page load
+  * Redraw parts of the page when needed without requiring a full server roundtrip
+
+## Challenges in SPA
+
+* Search Engine Optimization
+  * Search engines are unable to crawl through your website
+* Partitioning the responsibility between client and server
+  * How much of the web construction should be offloaded to the client site as opposed to the server site?
+    * Server acts as the data source in single-page applications and much of the work is offloaded to the client site
+* Maintaining History
+  * Do you save 
+* Analytics
+  * How you collect data analytics
+* Speeding up the Initial Page Load
+
+
+---
+
 # Useful Extensions
 
 ### Reactjs Code Snippet
