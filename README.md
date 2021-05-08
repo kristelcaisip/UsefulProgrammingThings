@@ -1,5 +1,5 @@
 # UsefulProgrammingThings
-This repo contains all the things that help me effectively do my programming stuff. 
+I've learned (and I am still learning) a wide variety of technologies over the years. It helps to have like a notebook that I can access (pretty much) anywhere to remind me of and how to use them. 
 
 ## Software Design 
 * [The 12 Factor App](https://12factor.net/)
