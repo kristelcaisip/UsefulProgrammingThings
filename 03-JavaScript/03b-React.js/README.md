@@ -95,6 +95,7 @@ $ yarn start                              // run the application and it should o
 
 ![img](../img/React_Component.png)
 
+* For more information, [React Components](https://reactjs.org/docs/react-component.html)
 * Create Web Apps in a modularised way
    * i.e. split the UI into individual elements as independent and reusable piece
       * e.g. In a Web App you can have separate components for app (Root component), menu, header, footer
@@ -389,27 +390,30 @@ $ yarn start                              // run the application and it should o
             }
          }
          ```
-* **React Component Lifecycle**
-   * React Components goe through the following lifecycle stages: **Mounting**, **Updating** and **Un-mounting**. And each stage has several lifecycle methods.
-   * **Mounting**
-      * These are called when an instance of a component is **created** and **inserted** into the DOM
-         * `constructor()`
-         * `getDerivedStateFromProps()`
-         * `render()`
-         * `componentDidMount()`
-      * Deprecated Methods (NOTE: DO NOT USE!!):
-         * `componentWillMount()`
-   * **Updating**
-      * Called when a component is being re-rendered caused by **changes to props or state**
-        * `getDerivedStateFromProps()` - associated with mounting
-        * `render()` - associated with mounting; called everytime the component is re-rendered
-        * `shouldComponentUpdate()` - will return a Boolean variable; false if the component never gets updated
-        * `getSnapshotBeforeUpdate()` - is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed
-        * `componentDidUpdate()` - is invoked immediately after updating occurs. This method is not called for the initial render
-        * Deprecated Methods (DO NOT USE!!)
-          * `componentWillReceiveProps()`
-          * `componentWillUpdate()`
-   * **Un-Mounting**
+### React Component Lifecycle
+* React Components goe through the following lifecycle stages: **Mounting**, **Updating** and **Un-mounting**. And each stage has several lifecycle methods. The only method that you must define in a `React.Component` subclass is `render()`, all others methods are optional
+  * **Mounting**
+    * These are called when an instance of a component is **created** and **inserted** into the DOM
+      * `constructor()`
+      * `static getDerivedStateFromProps()`
+      * `render()`
+      * `componentDidMount()`
+  * **Updating**
+  * These are called in order when a component is being re-rendered caused by **changes to props or state**
+    * `static getDerivedStateFromProps()` - associated with mounting
+    * `shouldComponentUpdate()` - will return a Boolean variable; false if the component never gets updated
+    * `render()` - associated with mounting; called everytime the component is re-rendered
+    * `getSnapshotBeforeUpdate()` - is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed
+    * `componentDidUpdate()` - is invoked immediately after updating occurs. This method is not called for the initial render
+* **Un-Mounting**
+  * This method is called when a component is **being removed from the DOM**
+    * `componentWillUnmount()`
+* **DO NOT USE!!! Deprecated Methods**
+  * Mounting
+    * `UNSAFE_componentWillMount()`
+  * Unmounting
+    * `UNSAFE_componentWillReceiveProps()`
+    * `UNSAFE_componentWillUpdate()`
 
 ### Root Component
 
