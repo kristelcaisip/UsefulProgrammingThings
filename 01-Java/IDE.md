@@ -36,7 +36,10 @@
       * Click on the *Generate* button and it will open GitHub Enterprise on your browser to get you to generate and save a token
       * Copy and paste the token into IntelliJ
   * On the *Welcome Page* click on the *Get from VCS* button
-  * Copy the URL of the GitHub Repository (use the SSH)
+  * Copy the URL of the GitHub Repository (use the SSH), something like below:
+    * `git@[CHANGE_TO_MATCH_SET_IN.SSH/CONFIG]:[CHANGE_TO_USER_NAME]/Repo-I-Want-To-Clone.git`
+      * `[CHANGE_TO_MATCH_SET_IN.SSH/CONFIG]` - this will be something like github-someusername
+      * `[CHANGE_TO_USER_NAME]` - GitHub username where this repo resides
   * Click on Clone
   * It will ask you for the password you set up when setting up the key pairs using ssh-keygen, type that in
   * It should successfully clone the repository
