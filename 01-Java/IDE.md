@@ -43,3 +43,8 @@
   * Click on Clone
   * It will ask you for the password you set up when setting up the key pairs using ssh-keygen, type that in
   * It should successfully clone the repository
+
+### Useful Plugins
+
+* Community Edition
+  * **Spring Assistant** - to be able to use Spring Initializr when creating a project
