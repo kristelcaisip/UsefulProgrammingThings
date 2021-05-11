@@ -299,3 +299,7 @@ More details can be found in [React Recipes](https://reactjs.org/docs/testing-re
     ```
 
 ### Environments
+
+#### Jest
+
+* **Setup**
