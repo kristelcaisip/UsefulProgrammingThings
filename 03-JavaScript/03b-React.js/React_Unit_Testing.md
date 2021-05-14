@@ -303,3 +303,13 @@ More details can be found in [React Recipes](https://reactjs.org/docs/testing-re
 #### Jest
 
 * **Setup**
+
+#### Frameworks
+
+* **Mocking**
+  * `jsdom` - for rendering a surface like browser
+  * `Cypress, puppeteer, webdriver` - for end-to-end tests
+  * `Jest, sinon` - for mocking functions
+  * `Jest, mock-require` - for mocking modules
+  * `Jest, sinon, lolex` - mocking timers
+
