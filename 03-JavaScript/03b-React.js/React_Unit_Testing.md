@@ -298,18 +298,29 @@ More details can be found in [React Recipes](https://reactjs.org/docs/testing-re
     expect(root).toMatchSnapshot();
     ```
 
-### Environments
+### Environments and Testing Frameworks
 
-#### Jest
-
-* **Setup**
-
-#### Frameworks
-
-* **Mocking**
-  * `jsdom` - for rendering a surface like browser
+* **Test Runners**
+  * `Jest` - JavaScript test runner; most popular and widely used in React.js but can also be used for Babel, TypeScript, Node, React, Angular, Vue, and more
+  * `mocha` - JavaScript test framework running on Node.js for simplifying asynchronous testing
+  * `ava` - test Runner for Node.js
+* **Test Helpers**
+  * `React Testing Library` - a set of helpers that let you test React Components without relying on their implementation details
+  * `Enzyme` - people are moving from here to the react testing library
+* **Combo Frameworks for Mocking**
+  * `jsdom` - for rendering a surface like browser; lets you access the DOM whilst using Jest
   * `Cypress, puppeteer, webdriver` - for end-to-end tests
   * `Jest, sinon` - for mocking functions
   * `Jest, mock-require` - for mocking modules
   * `Jest, sinon, lolex` - mocking timers
 
+#### Jest
+
+* **Setup**
+  * Install Jest
+    ```
+    $ npm install --save-dev jest     // with NPM
+    $ yarn ardd --dev jest            // with yarn
+    ```
+  * 
+#### 
