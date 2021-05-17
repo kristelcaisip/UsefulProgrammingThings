@@ -316,11 +316,23 @@ More details can be found in [React Recipes](https://reactjs.org/docs/testing-re
 
 #### Jest
 
+* This comes out of the box when you use `npx create-react-app [NEW_APP_NAME]`
 * **Setup**
   * Install Jest
     ```
     $ npm install --save-dev jest     // with NPM
     $ yarn ardd --dev jest            // with yarn
     ```
-  * 
-#### 
+
+#### React Testing Library
+
+* More Information can be found in [React Testing Library](https://github.com/testing-library/react-testing-library)
+  * More useful [examples](https://github.com/kentcdodds/create-react-app-react-testing-library-example)
+* This comes out of the box when you use `npx create-react-app [NEW_APP_NAME]`
+* Works with Jest
+* It's all about what is outputted in the DOM
+  * You can use actual DOM Node and interact with them like JavaScript but with an output of a React Component
+* **Setup**
+  ```
+  $ npm install --save-dev @testing-library/react
+  ```
