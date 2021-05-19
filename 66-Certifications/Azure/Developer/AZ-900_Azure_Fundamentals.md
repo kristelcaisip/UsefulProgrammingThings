@@ -5,10 +5,22 @@
   * Classroom sessions
 * [Study Guide](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3WzVA)
 
-## Describe Cloud Concepts
+## Describe Cloud Concepts 
 
-### Identify the benefits of Cloud Computing
+### Shared Responsibility Model
 
-### Identify the Differences Between Capital Expenditure (CapEx) and Operational Expenditure (OpEx)
+![](img/shared_responsibility_model.PNG)
 
-### Describe the Consumption-Based Model
+There are different Cloud Models available: **On Premise**, **Hybrid**, and **Private**. <br />
+
+There are also different Services available **Infrastructure as a Service (IaaS)**, **Platform as a Service (PaaS)**, **Software as a Service**.
+
+## Describe Core Azure Services
+
+## Describe Core Solutions and Management Tools on Azure
+
+## Describe General Security and Netowrk Security Features
+
+## Describe Identity, Governance, Privacy, and Compliance Features
+
+## Describe Azure Cost Management and Service Level Agreements
