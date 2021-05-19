@@ -43,4 +43,5 @@
 * [Introduction Ignite 6.0 Flame](https://shift.infinite.red/introducing-ignite-4-0-flame-1dfc891f9966)
 * [Step by Step Tutorial Part 1](https://shift.infinite.red/creating-a-trivia-app-with-ignite-bowser-part-1-1987cc6e93a1)
 * [NPM JS](https://www.npmjs.com/package/ignite-cli)
-* 
+* [Solve issues when creating a new App Part 1](https://github.com/infinitered/ignite/issues/1588)
+* [Solve issues when creating a new App Part 2](https://github.com/infinitered/ignite/issues/1580)
