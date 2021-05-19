@@ -34,3 +34,13 @@
     $ npm run start
     $ expo start
     ```
+---
+
+# Useful Notes
+
+* [Introducing Ignite for React Native](https://www.youtube.com/watch?v=5SVLs_NN_uY)
+* [GitHub for Infinite Red Ignite](https://github.com/infinitered/ignite)
+* [Introduction Ignite 6.0 Flame](https://shift.infinite.red/introducing-ignite-4-0-flame-1dfc891f9966)
+* [Step by Step Tutorial Part 1](https://shift.infinite.red/creating-a-trivia-app-with-ignite-bowser-part-1-1987cc6e93a1)
+* [NPM JS](https://www.npmjs.com/package/ignite-cli)
+* 
