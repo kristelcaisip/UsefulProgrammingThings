@@ -297,7 +297,17 @@ $ yarn start                              // run the application and it should o
           }
         }
         ```
- 
+      * Adding Type Constrain will result to a warning if the entry is not the specified type
+        ```
+        import PropTypes from 'prop-types'
+
+        class MyClass() {
+          ...
+          MyClass.propTypes = {
+            myProp: Proptypes.number
+          }
+        }
+        ```
       * Examples:
          * Dishes are available as **props** within the Menu Component and can be accessed as `this.props.dishes`
             ```
