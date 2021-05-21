@@ -287,6 +287,16 @@ $ yarn start                              // run the application and it should o
           ReactDOM.render(<Car model="Mustang"/>, document.getElementById('root'));
           ```
       * Props cannot be modified within the component
+      * Default `props` can be defined by
+        ```
+        class MyClass() {
+          ...
+
+          MyClass.defaultProps = {
+            myProp: 1;
+          }
+        }
+        ```
  
       * Examples:
          * Dishes are available as **props** within the Menu Component and can be accessed as `this.props.dishes`
