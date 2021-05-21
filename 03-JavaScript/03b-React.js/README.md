@@ -489,6 +489,33 @@ $ yarn start                              // run the application and it should o
    }
    export default [CLASS_NAME];
    ```
+* Adding methods in a class
+  * It is possible to add methods in a class and there are two ways of doing so:
+
+    ```
+    imports...
+
+    class MySampleClass extends Component {
+
+      constructor(props) {
+        super(props);
+
+        this.someMethod = this.someMethod.bind(this);
+
+      }
+
+      // you must use bind() with this  
+      someMethod() {
+        ...
+      }
+
+      // arrow functions can be used and you won't need bind()
+      someOtherMethod = () => {
+        ...
+      }
+
+    }
+    ```
 
 ### Classification of Components
 
@@ -506,6 +533,7 @@ $ yarn start                              // run the application and it should o
    * It should have `this.[FUNCTION_NAME]` notation since it is a local function
 * Function can be written in two ways:
   ```
+  // normal function
   function [FUNCTION_NAME](props) {...}
   
   //using the arrow notation
