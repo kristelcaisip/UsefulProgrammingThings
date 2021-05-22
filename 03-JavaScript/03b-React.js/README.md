@@ -746,6 +746,16 @@ $ yarn start                              // run the application and it should o
 
 ---
 
+# Template Literal
+
+* These are string literals allowing embedded expressions
+* They are enclosed by the back tick (``)
+  ```
+  console.log(`this is a template literal - ${myVariable}`)
+  ```
+
+---
+
 # Single Page Applications
 
 * Web Application or a website that fits in a single page
