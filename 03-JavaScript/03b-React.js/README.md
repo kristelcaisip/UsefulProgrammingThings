@@ -625,20 +625,36 @@ $ yarn start                              // run the application and it should o
    ```
 
 ## React Applications with Bootstrap
- 
- * Setup: 
-    * Install Bootstrap, ReactStrap and React-Popper in you project
-      ```
-      $ yarn add bootstrap@latest                             // install bootstrap into your React project
-      $ yarn add reactstrap@latest react-popper@latest        // allows you to make use of bootstrap components in react
-      ```
-    * Configure your project to make use of Bootstrap by adding the imports to your `index.js` before the import of `index.css`
-      ```
-      ...
-      import 'bootstrap/dist/css/bootstrap.min.css'
-      import './index.css'
-      ```
-    * Then you can import the Boostrap components where required
+
+* Setup: 
+  * Install Bootstrap, ReactStrap and React-Popper in you project
+    ```
+    $ yarn add bootstrap@latest                             // install bootstrap into your React project
+    $ yarn add reactstrap@latest react-popper@latest        // allows you to make use of bootstrap components in react
+    ```
+  * Configure your project to make use of Bootstrap by adding the imports to your `index.js` before the import of `index.css`
+    ```
+    ...
+    import 'bootstrap/dist/css/bootstrap.min.css'
+    import './index.css'
+    ```
+  * Then you can import the Boostrap components where required
+
+    ```
+    import { Button } from 'reactstrap';
+    <Button color="primary" size="lg">Large Button</Button>{' '}
+    ```
+
+  * Or use the `className` within the components
+    ```
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    ```
+
+* Useful Links (use these for reference when adding components:
+  * [ReactStrap](https://reactstrap.github.io)
+  * [Bootstrap]()https://getbootstrap.com/docs/5.0/getting-started/introduction/
+
 
 ## React Router
 
