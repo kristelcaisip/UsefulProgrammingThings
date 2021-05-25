@@ -336,3 +336,9 @@ More details can be found in [React Recipes](https://reactjs.org/docs/testing-re
   ```
   $ npm install --save-dev @testing-library/react
   ```
+
+---
+
+# Useful Links
+
+* [Testing buttons and with query by test id](https://www.youtube.com/watch?v=NE_aorvSeSQ)
