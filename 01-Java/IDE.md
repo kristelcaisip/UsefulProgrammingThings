@@ -12,8 +12,14 @@
   * Fill in the details as follow:
     
     ![image](img/new_spring_starter_project.png)
+
+    * When creating a new Resource Working Set, select **Resource**
+      ![image](img/new_working_set.png)
     
-  * Once created, change the view to show the Working Sets
+  * Select the working set
+    ![img](img/select_working_set1.png)<br/>
+    ![img](img/select_working_set1.png)
+  * Change the view to show the Working Sets
     
     ![image](img/eclipse_working_set.png)
     
