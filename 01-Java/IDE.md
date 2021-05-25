@@ -2,6 +2,23 @@
 
 ## Eclipse
 
+### Working Sets
+
+* Having a neat working set to keep all the projects in
+* Pre-requisites: 
+  * Install Spring tools from the Eclipse Marketplace
+* Steps: 
+  * Create a new Spring Starter Project
+  * Fill in the details as follow:
+    
+    ![image](img/new_spring_starter_project.png)
+    
+  * Once created, change the view to show the Working Sets
+    
+    ![image](img/eclipse_working_set.png)
+    
+  * Now you can see multiple projects within the working set
+ 
 ### Debugging
 * Right click on the project and select **Debug As**
 * It will ask you to change the perspective. Click on OK
