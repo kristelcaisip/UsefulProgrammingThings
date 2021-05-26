@@ -341,4 +341,7 @@ More details can be found in [React Recipes](https://reactjs.org/docs/testing-re
 
 # Useful Links
 
+* [Jest API](https://jestjs.io/docs/api)
 * [Testing buttons and with query by test id](https://www.youtube.com/watch?v=NE_aorvSeSQ)
+* [Testing Library-Examples](https://testing-library.com/docs/example-react-router)
+* [Testing Library-Core API](https://testing-library.com/docs/queries/byrole)
