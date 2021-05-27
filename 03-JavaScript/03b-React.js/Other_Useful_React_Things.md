@@ -93,3 +93,14 @@
 
         export default withRouter(HeaderComponent);
         ```
+---
+
+# Full Calendar
+
+* [Official Website](https://fullcalendar.io/)
+* [Tutorial](https://www.newline.co/@dmitryrogozhny/how-to-add-month,-week,-or-day-calendar-in-react-with-fullcalendar--7e10e8cf)
+
+## Troubleshooting
+
+* `Error: Failed to find '@fullcalendar/core/main.css'`
+    * In your projects `node-modules` folder, look for **@fullcalendar/common** module and then copy the `main.css` and copy into **@fullcalendar/core**
