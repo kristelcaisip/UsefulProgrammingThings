@@ -102,5 +102,5 @@
 
 ## Troubleshooting
 
-* `Error: Failed to find '@fullcalendar/core/main.css'`
+* `Can't resolve ˆ'@fullcalendar/core/main.css'`
     * In your projects `node-modules` folder, look for **@fullcalendar/common** module and then copy the `main.css` and copy into **@fullcalendar/core**
