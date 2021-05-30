@@ -118,6 +118,186 @@ There are also different Services available **Infrastructure as a Service (IaaS)
 
 ## Describe Core Azure Services (15-20%)
 
+### Azure Architectural Components
+
+#### Regions
+
+* Regions are made up of one or more datacentres in close proximity
+* Provide flexibility and scale to reduce customer latency
+* Preserve data residency with comprehensive compliance offering
+* Azure has 60+ regions, representing over 140 countries
+
+#### Region Pairs
+
+* At least 300 miles of separation between region pairs
+* Automatic replication for some services
+* Prioritized region recovery in the event of outage
+* Updates are rollout sequentially to minimize downtime
+* More details:
+  * https://aka.ms/PairedRegions
+
+#### Availability Options
+
+![image](img/availabilty_options.png)
+
+#### Availability Zones
+
+* Provide protection against downtime due to datacenter failure
+* Physically separate datacentres within the same region
+* Each datacenter is equipped with independent power, cooling, and networking
+* Connected through private fiber-optic networks
+
+#### Azure Resources
+
+* Azure resources are components like storage, virtual machines, and networks that are available to build cloud solutions
+  * Virtual Machines
+  * Storage Accounts
+  * Virtual Networks
+  * App Service 
+  * SQL Databases
+  * Functions
+
+#### Resource Groups
+
+![image](img/resource_groups.png)
+
+* Is a container to manage and aggragate resources in a single unit
+  * Resources can only exist in only **one** resource group
+  * Resources can exist in different regions
+  * Resources can be moved to different resource groups
+  * Applications can utilize multiple resource groups
+
+#### Azure Resource Manager
+
+![image](img/arm.png)
+
+* Azure Resource Manager (ARM) provides a management layer that enables you to create, update, and delete resources in your Azure subscriptions
+
+#### Azure Subscriptions
+
+![image](img/subscriptions.png)
+
+* An Azure Subscription provides you with authenticated and authorized access to Azure accounts
+  * **Billing Boundary:** generate separate billing reports and invoices for each subscription
+  * **Access Control Boundary:** Manage and controll access to the resources that users can provision with sepcific subscriptions
+
+#### Management Groups
+
+![image](img/management_groups.png
+)
+* Management groups can include multiple Azure subscriptions
+* Subscriptions inherit conditions applied to the management group
+* 10,000 management groups can be supported in a single directory
+* A management group tree can support up to six levels of depth
+
+### Core Azure Workload Products
+
+#### Azure Compute Services
+
+* Azure **compute** is an on-demand computing service that provides computing resources such as disks, processors, memory, networking, and operating systems
+  * Virtual Machines
+  * App Services
+  * Container Instances
+  * Azure Kubernetes Services (AKS)
+  * Windows Virtual Machines
+
+#### Azure Virtual Machines
+
+* Are software emulations of physical computers
+  * Includes a virtual processor, memory, storage, and networking
+  * IaaS offering that provides total control and customization
+* TODO Walkthrough: Create a Virtual Machine:
+  * Create a virtual machine
+  * Connect to the virtual machine
+  * Install the web server role and test
+
+#### Azure App Services
+
+* Is a fully managed platform to build, deploy, and scale web apps and APIs quickly
+  * Works with .Net, .NetC Core, Node.js, Java, Python, or PHP
+  * PaaS offering with enterprise-grade performance, security, and compliance requirements
+* TODO Walkthrough: Create an App Service
+  * Create a Web App using a Docker image
+  * Test th Web App
+
+#### Azure Container Service
+
+* Are light-weight, virtualized environments that does not require operating system maangement, and can respond to changes on demand
+  * **Azure Container Instances:** a PaaS offering that runs a container in Azure without the need to manage a virtual machine or additional services
+  * **Azure Kubernetes Service:** an orchestration service for containers with distributed architecture and large volumes of containers
+* TODO Walkthrough: Deploy Azure Container Instances
+  * Using Azure Portal create, configure, and deploy a Docker container to an Azure Container Instance. The container will deploy a Hello HTML Page
+  * Create a Container Instance
+  * Deploy the container and test
+
+#### Windows Virtual Desktop
+
+* Is a desktop and app virtualization that runs in the cloud
+  * Create a full desktop virtualization environment without having to run additional gateway servers
+  * Publish unlimited host pools to accommodate diverse workloads
+  * Reduce costs with pooled, multi-session resources
+
+#### Azure Networking Services
+
+* **Azure Virtual Network (VNet)** enables Azure resources to communicated with each other, the internet, and on-premises networks
+* **Virtual Private Network Gateway (VPN)** is used to send encrypted traffic between an Azure virtual network and an on-premise location over the public internet
+* **Azure Express Route** extends on-premises networks into Azure over a private connection that is facilitated by a connectivity provider
+* TODO Walkthrough: Create a Virtual Network
+  * Create a virtual network with two virtual machines and then test connection between the machines
+  * Create a virtual network
+  * Create two virtual machines
+  * Test the connection
+
+#### Azure Storage Services
+
+* **Container Storage (blob)** is optimised for storing massive amounts of unstructured data, such as text, or binary data
+* **Disk Storage** provides disks for virtual machines, applications, and other services to access and use
+* **Azure Files** sets up a highly available network file shares that can be accessed by using the standard server message block (SMB) protocol
+
+#### Azure Storage Access Tiers
+
+* **Hot**
+  * Optimised for storing data that is accessed frequently
+* **Cool**
+  * Optimised for storing data that is infrequently accessed and stored for at least 30 days
+* **Archive**
+  * Optimised for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements
+* TODO Walkthrough: Create Blob Storage
+  * Create a storage account with a blob storage container. Work with blob files
+  * Create a storage account
+  * Work with blob storage
+  * Monitor the storage account
+
+#### Azure Database Services
+
+* **Azure Cosmos Database**
+  * Is a globally-distributed database service that elastically and independently scales throughput and storage
+* **Azure SQL Database**
+  * Is a relational database as a service (DaaS) based on the latest stable version of the Microsoft SQL Sever database engine
+* **Azure Database for MySQL**
+  * Is a fully-mangaged MySQL database service for app developers
+* **Azure Database for PostgreSQL**
+  * Is a relational database service based on the open-source Postgres database engine
+
+#### Azure SQL Managed Instance
+
+* Allows existing SQL Server customers to lift and shift their on-premises applications to the cloud with minimal applciation and database changes
+  * Fully managed and evergreen PaaS
+  * Preserves all PaaS capabilities (automatic patching and version updates, atuomated backups, and high availability)
+  * Exchange existing licenses for discounted rates on SQL Managed Instance using the Azure Hybrid Benefit
+* TODO Walkthrough: Create a SQL Database
+  * Create a SQL database in Azure and then query the data in that database
+  * Create the database
+  * Query the database
+
+#### Explore Azure Marketplace
+
+* Allows customers to find, try, purchase, and provision applications and services from hundreds of leading service providers, which are all certified to run on Azure
+  * Open source container platforms
+  * Virtual machine and database images
+  * Applcation build and deployment software
+  * Developer Tools
+  * Much more...
 ---
 
 ## Describe Core Solutions and Management Tools on Azure (10-15%)
