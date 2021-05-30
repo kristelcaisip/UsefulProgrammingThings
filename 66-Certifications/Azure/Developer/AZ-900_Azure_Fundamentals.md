@@ -313,3 +313,20 @@ There are also different Services available **Infrastructure as a Service (IaaS)
 ---
 
 ## Describe Azure Cost Management and Service Level Agreements (10-15%)
+
+---
+
+# Useful Links
+
+* [Azure Fundamentals Videos for Parts 1 to 6](https://docs.microsoft.com/en-gb/learn/paths/az-900-describe-cloud-concepts/)
+* [Microsoft Build: Business Continuity and Disaster Recovery (BCDR): Azure Paired Regions](https://docs.microsoft.com/en-gb/azure/best-practices-availability-paired-regions)
+* [Products Available by Region](https://azure.microsoft.com/en-gb/global-infrastructure/services/)
+* [Microsoft Build: Get Started with Azure CLI](https://docs.microsoft.com/en-gb/cli/azure/get-started-with-azure-cli)
+* [Microsoft Build: Overview of Azure Cloud Shell](https://docs.microsoft.com/en-gb/azure/cloud-shell/overview)
+* [Microsoft Build: Azure Compliance Documentation](https://docs.microsoft.com/en-gb/azure/compliance/)
+* [Azure Pricing Calculator](https://azure.microsoft.com/en-gb/pricing/calculator/)
+* [Total Cost of Ownership Calculator](https://azure.microsoft.com/en-gb/pricing/tco/calculator/)
+* [Microsoft Build: Azure for AWS Professionals](https://docs.microsoft.com/en-gb/azure/architecture/aws-professional/)
+* [Microsoft Build: GCP to Azure Services Comparison](https://docs.microsoft.com/en-gb/azure/architecture/gcp-professional/services)
+* [Microsoft Build: Azure for AWS Professionals](https://docs.microsoft.com/en-gb/azure/architecture/aws-professional/)
+* [Manage Services with the Azure Portal](https://docs.microsoft.com/en-gb/learn/modules/tour-azure-portal/5-exercise-navigate-the-portal)
