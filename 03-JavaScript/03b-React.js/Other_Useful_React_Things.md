@@ -104,3 +104,23 @@
 
 * `Can't resolve ˆ'@fullcalendar/core/main.css'`
     * In your projects `node-modules` folder, look for **@fullcalendar/common** module and then copy the `main.css` and copy into **@fullcalendar/core**
+
+---
+
+# Axios
+
+* A [library](https://github.com/axios/axios) that helps us make http requests to external resources
+* Allows for asynchronous calls (Promise)
+    * **Promise** eventual completion (or failure) of an asynchronous operation
+    ```javascript
+    asyncCallWithPromise().then (response => doWhat(response))
+                          .catch (error => handleError(reponse))
+    ```
+* You can call `GET`, `POST`, `PUT`, `DELETE`. `OPTIONS`, `REQUEST`, `HEAD`, and `PATCH`
+
+## Usage
+
+* Add `axios` into your project
+```
+$ npm add axios
+```

@@ -318,6 +318,7 @@ There are also different Services available **Infrastructure as a Service (IaaS)
 
 # Useful Links
 
+* [AZ-900 Exam Cram](https://www.youtube.com/watch?v=gH3pwWO0Q9Y)
 * [Azure Fundamentals Videos for Parts 1 to 6](https://docs.microsoft.com/en-gb/learn/paths/az-900-describe-cloud-concepts/)
 * [Microsoft Build: Business Continuity and Disaster Recovery (BCDR): Azure Paired Regions](https://docs.microsoft.com/en-gb/azure/best-practices-availability-paired-regions)
 * [Products Available by Region](https://azure.microsoft.com/en-gb/global-infrastructure/services/)
