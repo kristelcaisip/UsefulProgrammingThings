@@ -13,3 +13,14 @@
 
     const wrapper = shallow(<ReactComponent />);
     ```
+
+
+    Hi Carly, 
+
+I found your website on the Love Your Doorstep directory and I really enjoyed looking at your portfolio. You seem fun and I like that you don't stage shots. I would like to enquire about your availability and services/fees. My partner and I are getting married on the 23 June 2021 at 2pm (a bit short notice!!) and would like to have a photographer to capture that special moment. It won't be a big wedding - it will just be in the Register Office in Enfield with about 8-10 people (including the bride and groom) for a few hours (possibly from 1pm to 3/4pm). 
+
+I would love to get in touch with you and discuss further if you're free and would also like to work with me. My number is 07942326448. Thanks and hope to hear from you. 
+
+
+Kind regards, 
+Kristel

@@ -116,7 +116,14 @@
     asyncCallWithPromise().then (response => doWhat(response))
                           .catch (error => handleError(reponse))
     ```
-* You can call `GET`, `POST`, `PUT`, `DELETE`. `OPTIONS`, `REQUEST`, `HEAD`, and `PATCH`
+* You can use all the HTTP methods `GET`, `POST`, `PUT`, `DELETE`. `OPTIONS`, `REQUEST`, `HEAD`, and `PATCH`
+* The response contains the following:
+    * `data: {}` - response provided by the server
+    * `status: 200` - the HTTP Status code from the server response
+    * `statusText: 'OK'` - the HTTP Status message from the server response
+    * `headers: {}` - the headers that the server responded with; al headers name
+    * `config: {}` - is the config that provided to axios for the request
+    * `request` - is the request that generated this response; it is the last ClientRequest instance in node.js (in redirects) and an XMLHttpRequest instance the browser
 
 ## Usage
 
